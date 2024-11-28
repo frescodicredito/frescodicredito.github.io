@@ -14,14 +14,14 @@
     body {
       font-family: 'Arial', sans-serif;
       line-height: 1.6;
+      background-color: #f9f9f9;
+      color: #333;
+      padding: 20px;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       min-height: 100vh;
-      background-color: #f9f9f9;
-      color: #333;
-      padding: 20px;
     }
     header {
       text-align: center;
@@ -44,26 +44,22 @@
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
       border-radius: 12px;
     }
-    .content h2 {
-      font-size: 1.8rem;
-      margin-bottom: 10px;
-      color: #333;
-    }
-    .content p {
-      font-size: 1rem;
-      color: #555;
+    .content img {
+      max-width: 100%;
+      height: auto;
       margin-bottom: 20px;
+      border-radius: 10px;
+    }
+    .quote {
+      font-size: 1.8rem;
+      color: #555;
+      font-style: italic;
+      margin-top: 20px;
     }
     footer {
       margin-top: 20px;
       font-size: 0.9rem;
       color: #999;
-    }
-    img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 10px;
-      margin-bottom: 20px;
     }
     a {
       color: #007ACC;
@@ -72,19 +68,6 @@
     }
     a:hover {
       text-decoration: underline;
-    }
-    .btn {
-      display: inline-block;
-      padding: 10px 20px;
-      font-size: 1rem;
-      background-color: #007ACC;
-      color: white;
-      text-decoration: none;
-      border-radius: 5px;
-      margin-top: 10px;
-    }
-    .btn:hover {
-      background-color: #005f99;
     }
   </style>
 </head>
@@ -95,9 +78,9 @@
   </header>
 
   <div class="content">
-    <h2>Riflessioni</h2>
-    <img src="batesonquote.webp" alt="Citazione di Gregory Bateson">
-    <a href="https://github.com/frescodicredito" class="btn">Scopri i miei progetti</a>
+    <img src="abstract_interconnection_design.png" alt="Immagine astratta che rappresenta comunicazione e interconnessione">
+    <p class="quote">"Il principale problema della comunicazione è l'illusione che abbia avuto luogo."</p>
+    <p class="quote"><em>– Gregory Bateson</em></p>
   </div>
 
   <footer>
