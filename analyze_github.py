@@ -1,6 +1,21 @@
 import os
 from github import Github
 
+from dotenv import load_dotenv
+import os
+
+# Carica il file .env dal percorso specifico
+dotenv_path = os.path.join(os.getcwd(), ".env")
+print(f"Tentativo di caricare il file .env dal percorso: {dotenv_path}")
+load_dotenv(dotenv_path=dotenv_path)
+
+# Debug: verifica il valore del token
+token = os.getenv("GITHUB_TOKEN")
+if not token:
+    raise ValueError("Errore: GITHUB_TOKEN non trovato. Assicurati che il file .env sia nella directory corretta.")
+else:
+    print(f"Token trovato: {token[:5]}... (troncato per sicurezza)")
+
 def list_repo_files(repo):
     """Elenca i file nel repository."""
     print("Elenco dei file nel repository:")
