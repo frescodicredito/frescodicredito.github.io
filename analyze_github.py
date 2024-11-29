@@ -1,5 +1,17 @@
 import os
 from github import Github
+from dotenv import load_dotenv
+
+# Carica le variabili dal file .env
+# Modifica: Specifica manualmente il percorso del file .env
+load_dotenv(dotenv_path=os.path.join(os.getcwd(), ".env"))
+
+# Debug: verifica se il token è stato caricato
+token = os.getenv("GITHUB_TOKEN")
+if not token:
+    raise ValueError("Errore: Il GITHUB_TOKEN non è stato trovato. Assicurati che il file .env sia configurato correttamente.")
+else:
+    print(f"Token GitHub caricato correttamente: {token[:5]}... (troncato per sicurezza)")
 
 # Funzione per creare un nuovo file
 def create_new_file(repo, file_path, content, commit_message):
@@ -112,12 +124,6 @@ def process_command(command, repo):
 # Inizia il processo
 def main():
     print("Lo script è stato avviato correttamente.")
-
-    # Recupera il token GitHub
-    token = os.getenv("GITHUB_TOKEN")
-    if not token:
-        raise ValueError("Errore: GITHUB_TOKEN non trovato. Assicurati di aver configurato il secret correttamente.")
-    print("Token GitHub recuperato con successo.")
 
     # Connessione a GitHub
     g = Github(token)
