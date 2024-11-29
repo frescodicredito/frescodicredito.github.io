@@ -29,32 +29,6 @@ def upload_image(repo, image_path, commit_message):
     except Exception as e:
         print(f"Errore durante il caricamento dell'immagine '{image_path}': {e}")
 
-# Funzione per generare immagini con DALL·E
-def generate_image_with_dalle(prompt):
-    try:
-        import openai
-        openai.api_key = os.getenv("OPENAI_API_KEY")
-        
-        response = openai.Image.create(
-            prompt=prompt,
-            n=1,
-            size="512x512"
-        )
-        image_url = response["data"][0]["url"]
-        
-        # Scarica l'immagine generata
-        import requests
-        response = requests.get(image_url)
-        file_name = "dalle_generated_image.png"
-        with open(file_name, "wb") as file:
-            file.write(response.content)
-        
-        print(f"Immagine generata con successo: {file_name}")
-        return file_name
-    except Exception as e:
-        print(f"Errore durante la generazione dell'immagine con DALL·E: {e}")
-        return None
-
 # Funzione per aggiungere immagini a un file HTML
 def add_image_to_html(repo, file_path, image_name, alt_text="Immagine"):
     try:
@@ -109,6 +83,7 @@ def add_menu_item(repo, menu_path, menu_item_name, menu_item_link):
 
 # Funzione per gestire comandi dinamici
 def process_command(command, repo):
+    print(f"Comando ricevuto: {command}")
     if "crea pagina" in command:
         page_name = input("Inserisci il nome del file HTML (senza estensione): ")
         title = input("Inserisci il titolo della pagina: ")
@@ -125,21 +100,19 @@ def process_command(command, repo):
         image_path = input("Inserisci il percorso dell'immagine da caricare: ")
         upload_image(repo, image_path, "Caricata nuova immagine")
 
-    elif "genera immagine" in command:
-        dalle_prompt = input("Descrivi cosa vuoi generare con DALL·E: ")
-        generated_image = generate_image_with_dalle(dalle_prompt)
-        if generated_image:
-            upload_image(repo, generated_image, "Caricata immagine generata con DALL·E")
-            add_to_html = input("Vuoi aggiungere questa immagine a un file HTML? (sì/no): ").lower()
-            if add_to_html == "sì":
-                html_file = input("Inserisci il nome del file HTML (es. index.html): ")
-                add_image_to_html(repo, html_file, os.path.basename(generated_image))
+    elif "aggiungi immagine" in command:
+        html_file = input("Inserisci il nome del file HTML (es. index.html): ")
+        image_name = input("Inserisci il nome dell'immagine (es. banner.jpg): ")
+        alt_text = input("Inserisci il testo alternativo (alt) per l'immagine: ")
+        add_image_to_html(repo, html_file, image_name, alt_text)
 
     else:
-        print("Comando non riconosciuto. Prova con 'crea pagina', 'aggiungi voce menu', 'carica immagine' o 'genera immagine'.")
+        print("Comando non riconosciuto. Prova con 'crea pagina', 'aggiungi voce menu', 'carica immagine', o 'aggiungi immagine'.")
 
 # Inizia il processo
 def main():
+    print("Avvio dello script...")
+
     # Recupera il token GitHub
     token = os.getenv("GITHUB_TOKEN")
     if not token:
@@ -152,12 +125,12 @@ def main():
     repo_name = "frescodicredito/frescodicredito.github.io"
     repo = g.get_repo(repo_name)
 
-    # Chiedi il comando all'utente
+    print("Connessione al repository effettuata con successo!")
     print("Esempi di comandi:")
     print("- 'Crea pagina'")
     print("- 'Aggiungi voce menu'")
     print("- 'Carica immagine'")
-    print("- 'Genera immagine'")
+    print("- 'Aggiungi immagine'")
     command = input("Inserisci il comando da eseguire: ").lower()
 
     # Esegui il comando
