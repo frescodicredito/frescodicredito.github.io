@@ -24,5 +24,5 @@ jobs:
 
       - name: Run analysis script
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          MY_GITHUB_TOKEN: ${{ secrets.MY_GITHUB_TOKEN }} # Usa il nuovo secret configurato
         run: python analyze_github.py
