@@ -111,12 +111,13 @@ def process_command(command, repo):
 
 # Inizia il processo
 def main():
-    print("Avvio dello script...")
+    print("Lo script è stato avviato correttamente.")
 
     # Recupera il token GitHub
     token = os.getenv("GITHUB_TOKEN")
     if not token:
         raise ValueError("Errore: GITHUB_TOKEN non trovato. Assicurati di aver configurato il secret correttamente.")
+    print("Token GitHub recuperato con successo.")
 
     # Connessione a GitHub
     g = Github(token)
