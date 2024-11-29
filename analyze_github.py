@@ -37,7 +37,17 @@ def read_file_content(repo, file_path):
         print(f"Errore durante la lettura del file '{file_path}': {e}")
         return None
 
+import sys
+
 def main():
+    # Leggi il comando dalla riga di comando
+    command = sys.argv[1] if len(sys.argv) > 1 else ""
+    if not command:
+        print("Errore: Nessun comando fornito.")
+        return
+
+    print(f"Comando ricevuto: {command}")
+
     # Configura il token GitHub
     token = os.getenv("GITHUB_TOKEN")
     if not token:
@@ -55,17 +65,8 @@ def main():
         print(f"Errore durante la connessione al repository: {e}")
         return
 
-    # Elenca i file nel repository
-    list_repo_files(repo)
-
-    # Legge file specifici per analisi
-    files_to_read = ["index.html", "style.css"]
-    for file_path in files_to_read:
-        content = read_file_content(repo, file_path)
-        if content:
-            print(f"Analisi suggerimenti per '{file_path}':")
-            print("- Controlla la struttura HTML.")
-            print("- Assicurati che i link funzionino correttamente.")
+    # Esegui il comando
+    process_command(command, repo)
 
 if __name__ == "__main__":
     main()
