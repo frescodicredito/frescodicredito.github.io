@@ -33,7 +33,7 @@ def process_command_from_gpt(command, repo):
 
 # Connessione a GitHub
 def main():
-    token = os.getenv("GITHUB_TOKEN")
+    token = os.getenv("MY_GITHUB_TOKEN")
     if not token:
         raise ValueError("Errore: GITHUB_TOKEN non trovato. Configura il file .env.")
 
