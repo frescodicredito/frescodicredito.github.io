@@ -1,0 +1,30 @@
+name: Custom GPT Automation
+
+on:
+  workflow_dispatch:
+    inputs:
+      command:
+        description: "Comando GPT da eseguire"
+        required: true
+        default: "crea pagina"
+
+jobs:
+  run-command:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v3
+        with:
+          python-version: 3.x
+
+      - name: Install dependencies
+        run: pip install PyGithub
+
+      - name: Run GPT Command Script
+        run: |
+          echo "Esecuzione del comando: ${{ inputs.command }}"
+          python3 analyze_github.py "${{ inputs.command }}"
