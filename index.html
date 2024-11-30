@@ -87,6 +87,26 @@
     nav ul li a:hover {
       color: #f0a500;
     }
+    .form-container {
+      margin-top: 20px;
+    }
+    .form-container input, .form-container textarea, .form-container button {
+      display: block;
+      width: 80%;
+      margin: 10px auto;
+      padding: 10px;
+      font-size: 1rem;
+    }
+    .form-container button {
+      background-color: #f0a500;
+      color: white;
+      border: none;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    .form-container button:hover {
+      background-color: #e08e00;
+    }
   </style>
 </head>
 <body>
@@ -96,6 +116,7 @@
       <li><a href="#portfolio">Portfolio</a></li>
       <li><a href="#blog">Blog</a></li>
       <li><a href="#esperimenti">Esperimenti</a></li>
+      <li><a href="#contatti">Contatti</a></li>
     </ul>
   </nav>
 
@@ -128,6 +149,19 @@
   <section id="esperimenti" class="content">
     <h2>Esperimenti</h2>
     <p>Spazio per provare nuove tecnologie e concetti.</p>
+  </section>
+
+  <section id="contatti" class="content">
+    <h2>Contatti</h2>
+    <p>Compila il modulo per metterti in contatto con me.</p>
+    <div class="form-container">
+      <form action="mailto:tuo-email@example.com" method="post" enctype="text/plain">
+        <input type="text" name="name" placeholder="Il tuo nome" required>
+        <input type="email" name="email" placeholder="La tua email" required>
+        <textarea name="message" rows="5" placeholder="Il tuo messaggio"></textarea>
+        <button type="submit">Invia</button>
+      </form>
+    </div>
   </section>
 
   <!-- Footer -->
