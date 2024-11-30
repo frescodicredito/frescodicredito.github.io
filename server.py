@@ -5,9 +5,15 @@ from github import Github
 app = Flask(__name__)
 
 # Configura il token GitHub
+import os
+
+# Debug temporaneo per verificare il token
 token = os.getenv("MY_GITHUB_TOKEN")
 if not token:
     raise ValueError("Errore: MY_GITHUB_TOKEN non trovato.")
+else:
+    print(f"Token caricato: {token[:5]}... (troncato per sicurezza)")
+
 
 g = Github(token)
 repo_name = "frescodicredito/frescodicredito.github.io"
