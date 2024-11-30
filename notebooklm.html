@@ -9,15 +9,27 @@
   <style>
     body {
       font-family: 'Lora', serif;
-      background-color: #fdfdfd;
-      color: #333;
+      line-height: 1.8;
       margin: 0;
       padding: 0;
+      background: url('https://images.unsplash.com/photo-1574169208507-8437614483dd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDJ8fGRhcmt8ZW58MHx8fHwxNjk5MTkxMjAw&ixlib=rb-4.0.3&q=80&w=1920') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+    }
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.7); /* Dark overlay for readability */
+      z-index: -1;
     }
     .container {
       max-width: 800px;
       margin: 50px auto;
       padding: 20px;
+      text-align: center;
     }
     h1 {
       font-family: 'Playfair Display', serif;
@@ -29,14 +41,13 @@
       margin-top: 20px;
       margin-bottom: 15px;
     }
-    p {
+    p, ul {
       font-size: 1.2rem;
-      line-height: 1.8;
       margin-bottom: 20px;
     }
     blockquote {
       font-style: italic;
-      color: #666;
+      color: #f0f0f0;
       margin: 20px 0;
       padding-left: 15px;
       border-left: 3px solid #f0a500;
@@ -44,7 +55,6 @@
     ul {
       list-style-type: disc;
       margin-left: 40px;
-      margin-bottom: 20px;
     }
     ul li {
       margin-bottom: 10px;
@@ -52,16 +62,18 @@
     a {
       color: #f0a500;
       text-decoration: none;
+      transition: color 0.3s ease;
     }
-    footer {
-      margin-top: 50px;
-      text-align: center;
-      font-size: 0.9rem;
-      color: #666;
+    a:hover {
+      color: #ffd700;
     }
   </style>
 </head>
 <body>
+  <!-- Background Overlay -->
+  <div class="overlay"></div>
+
+  <!-- Article Content -->
   <div class="container">
     <h1>NotebookLM: Smarter Notes, or Just Another AI Tool?</h1>
     <p>
