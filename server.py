@@ -24,6 +24,10 @@ try:
 except Exception as e:
     raise ValueError(f"Errore durante la connessione a GitHub: {e}")
 
+@app.route('/', methods=['GET'])
+def home():
+    return "Server funzionante!"
+
 @app.route('/read', methods=['GET'])
 def read_file():
     file_path = request.args.get('file_path')
