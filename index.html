@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Frescodicredito: un dialogo tra mente, natura e tecnologia.">
   <title>frescodicredito</title>
   <style>
     * {
@@ -13,7 +14,6 @@
     body {
       font-family: 'Arial', sans-serif;
       line-height: 1.6;
-      margin: 0;
       overflow: hidden;
     }
     .video-background {
@@ -23,7 +23,6 @@
       width: 100%;
       height: 100%;
       z-index: -1;
-      overflow: hidden;
     }
     iframe {
       position: absolute;
@@ -42,7 +41,7 @@
     }
     h1 {
       font-size: 3rem;
-      margin-top: 60px; /* Spazio per evitare sovrapposizione con il menu */
+      margin-top: 60px;
       text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     }
     p {
@@ -58,7 +57,6 @@
       color: #ccc;
       text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
     }
-    /* Stile per il menu */
     nav {
       background: rgba(0, 0, 0, 0.7);
       position: sticky;
@@ -73,10 +71,6 @@
       display: flex;
       justify-content: center;
       gap: 20px;
-      padding: 0;
-    }
-    nav ul li {
-      display: inline;
     }
     nav ul li a {
       text-decoration: none;
@@ -88,62 +82,55 @@
     nav ul li a:hover {
       color: #f0a500;
     }
-    section {
-      display: none; /* Nascondere tutte le sezioni */
+    .loader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 999;
+    }
+    .loader h2 {
       color: white;
-      padding: 20px;
-      text-align: center;
+      font-size: 2rem;
+      animation: fade 1.5s infinite;
     }
-    section.active {
-      display: block; /* Mostrare solo la sezione attiva */
+    @keyframes fade {
+      0%, 100% { opacity: 0; }
+      50% { opacity: 1; }
     }
-    .form-container {
-      margin-top: 20px;
-    }
-    .form-container input, .form-container textarea, .form-container button {
-      display: block;
-      width: 80%;
-      margin: 10px auto;
-      padding: 10px;
-      font-size: 1rem;
-    }
-    .form-container button {
-      background-color: #f0a500;
-      color: white;
-      border: none;
-      cursor: pointer;
-      transition: background 0.3s ease;
-    }
-    .form-container button:hover {
-      background-color: #e08e00;
+    .hidden {
+      display: none;
     }
   </style>
-  <script>
-    function navigateTo(sectionId) {
-      document.querySelectorAll('section').forEach(section => {
-        section.classList.remove('active');
-      });
-      document.getElementById(sectionId).classList.add('active');
-    }
-  </script>
 </head>
 <body>
+  <!-- Loader -->
+  <div class="loader" id="loader">
+    <h2>Caricamento...</h2>
+  </div>
+
   <!-- Menu di navigazione -->
   <nav>
     <ul>
-      <li><a href="javascript:void(0)" onclick="navigateTo('portfolio')">Portfolio</a></li>
-      <li><a href="javascript:void(0)" onclick="navigateTo('blog')">Blog</a></li>
-      <li><a href="javascript:void(0)" onclick="navigateTo('esperimenti')">Esperimenti</a></li>
-      <li><a href="javascript:void(0)" onclick="navigateTo('contatti')">Contatti</a></li>
+      <li><a href="#portfolio">Portfolio</a></li>
+      <li><a href="#blog">Blog</a></li>
+      <li><a href="#esperimenti">Esperimenti</a></li>
+      <li><a href="#contatti">Contatti</a></li>
     </ul>
   </nav>
 
   <!-- Video di sfondo -->
   <div class="video-background">
-    <iframe src="https://player.vimeo.com/video/1034476418?background=1&autoplay=1&loop=1&muted=1" 
+    <iframe src="https://player.vimeo.com/video/1034835015?badge=0&autoplay=1&loop=1&muted=1&background=1" 
       frameborder="0" 
-      allow="autoplay; fullscreen" 
-      title="naturetech">
+      allow="autoplay; fullscreen; picture-in-picture" 
+      title="Gen-3 Alpha 1625330085, Wide angle shot Una, M 5"
+      aria-label="Background video showing innovation and nature">
     </iframe>
   </div>
 
@@ -153,38 +140,16 @@
     <p>Un dialogo tra mente, natura e tecnologia.</p>
   </div>
 
-  <!-- Sezioni -->
-  <section id="portfolio" class="content">
-    <h2>Portfolio</h2>
-    <p>Qui ci saranno i tuoi progetti principali.</p>
-  </section>
-
-  <section id="blog" class="content">
-    <h2>Blog</h2>
-    <p>Condividi idee, riflessioni e articoli qui.</p>
-  </section>
-
-  <section id="esperimenti" class="content">
-    <h2>Esperimenti</h2>
-    <p>Spazio per provare nuove tecnologie e concetti.</p>
-  </section>
-
-  <section id="contatti" class="content">
-    <h2>Contatti</h2>
-    <p>Compila il modulo per metterti in contatto con me.</p>
-    <div class="form-container">
-      <form action="mailto:tuo-email@example.com" method="post" enctype="text/plain">
-        <input type="text" name="name" placeholder="Il tuo nome" required>
-        <input type="email" name="email" placeholder="La tua email" required>
-        <textarea name="message" rows="5" placeholder="Il tuo messaggio"></textarea>
-        <button type="submit">Invia</button>
-      </form>
-    </div>
-  </section>
-
   <!-- Footer -->
   <footer>
     &copy; 2024 frescodicredito. Tutti i diritti riservati.
   </footer>
+
+  <script>
+    // Nascondere il loader dopo il caricamento della pagina
+    window.onload = () => {
+      document.getElementById('loader').classList.add('hidden');
+    };
+  </script>
 </body>
 </html>
