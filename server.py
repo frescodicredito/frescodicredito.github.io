@@ -1,6 +1,7 @@
 import os
 from flask import Flask, request, jsonify
 from github import Github
+import smtplib
 
 app = Flask(__name__)
 
@@ -62,6 +63,38 @@ def create_file():
         return jsonify({"message": f"File '{file_path}' creato con successo."})
     except Exception as e:
         return jsonify({"error": f"Errore durante la creazione del file: {str(e)}"}), 400
+
+@app.route('/send-email', methods=['POST'])
+def send_email():
+    data = request.json
+    name = data.get('name')
+    email = data.get('email')
+    message = data.get('message')
+
+    if not all([name, email, message]):
+        return jsonify({"error": "Missing required fields"}), 400
+
+    # Configurazione SMTP
+    try:
+        smtp_server = os.environ.get('SMTP_SERVER', 'smtp.gmail.com')  # Server SMTP (es. Gmail)
+        smtp_port = int(os.environ.get('SMTP_PORT', 587))  # Porta SMTP (default 587)
+        smtp_user = os.environ.get('SMTP_USER')  # Email mittente
+        smtp_pass = os.environ.get('SMTP_PASS')  # Password/App password
+        recipient_email = os.environ.get('RECIPIENT_EMAIL')  # Email destinatario
+
+        if not all([smtp_user, smtp_pass, recipient_email]):
+            return jsonify({"error": "SMTP configuration is missing"}), 500
+
+        # Invia email
+        with smtplib.SMTP(smtp_server, smtp_port) as server:
+            server.starttls()
+            server.login(smtp_user, smtp_pass)
+            email_message = f"Subject: New Contact Form Message\n\nFrom: {name} <{email}>\n\n{message}"
+            server.sendmail(smtp_user, recipient_email, email_message)
+
+        return jsonify({"message": "Email sent successfully"}), 200
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
 
 if __name__ == '__main__':
     # Porta configurata per Railway
