@@ -287,7 +287,7 @@ footer {
 }
 
 
-/* Sezione principale della pagina About Me */
+/* Stile principale per la pagina About Me */
 .about-me {
     max-width: 600px;
     margin: 100px auto;
@@ -295,51 +295,44 @@ footer {
     padding: 20px;
     background: #000; /* Sfondo nero */
     color: #fff; /* Testo bianco */
-    border-radius: 10px; /* Angoli arrotondati */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Ombra */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
-/* Titolo */
+/* Titolo principale */
 .about-title {
-    font-family: 'Cinzel', serif;
+    font-family: 'Cinzel', serif; /* Font coerente con le altre pagine */
     font-size: 2.5rem;
-    color: #fff; /* Titolo bianco */
-    margin-bottom: 20px;
-    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8); /* Leggera ombra per il titolo */
-}
-
-/* Paragrafi */
-.about-content p {
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.2rem;
-    line-height: 1.8;
     color: #fff; /* Testo bianco */
     margin-bottom: 20px;
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8); /* Ombra leggera per leggibilità */
 }
 
 /* Foto profilo */
 .profile-picture {
     display: flex;
     justify-content: center;
-    margin: 20px 0; /* Spazio sopra e sotto */
+    margin: 20px 0;
 }
 
-.rounded-photo {
-    width: 150px; /* Dimensioni della foto */
+.profile-picture img.rounded-photo {
+    width: 150px; /* Larghezza e altezza della foto */
     height: 150px;
     border-radius: 50%; /* Rende la foto tonda */
-    object-fit: cover; /* Assicura che l'immagine si adatti bene al contenitore */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Ombra */
-    margin: 0 auto 20px; /* Centra la foto */
-    display: block;
+    border: 2px solid #fff; /* Bordo bianco */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Ombra */
+    object-fit: cover; /* Adatta la foto tonda */
 }
 
-
-
-.blog-post a.read-more:hover {
-    text-decoration: underline;
-    color: #ffd700; /* Giallo più chiaro al passaggio del mouse */
+/* Sezione biografia */
+.about-content p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: #fff; /* Testo bianco */
 }
+
 
 /* Stile principale per la pagina Experiments */
 .experiments {
