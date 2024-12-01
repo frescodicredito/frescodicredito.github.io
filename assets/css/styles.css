@@ -130,3 +130,30 @@ footer {
     font-size: 0.9rem;
     color: #ddd;
 }
+
+.social-links {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  gap: 20px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.social-links a {
+  color: white;
+  font-size: 2rem;
+  text-decoration: none;
+}
+
+.social-links a:hover {
+  color: #f0a500;
+}
+
+.social-links.visible {
+  opacity: 1;
+  visibility: visible;
+}
