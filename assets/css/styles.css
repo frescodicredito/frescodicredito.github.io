@@ -231,26 +231,28 @@ footer {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
 
-/* Stile principale per la pagina About Me */
+/* Sezione principale della pagina About Me */
 .about-me {
     max-width: 600px;
-    margin: 100px auto; /* Centra il contenuto verticalmente e orizzontalmente */
-    text-align: center; /* Centra il testo */
+    margin: 100px auto;
+    text-align: center;
     padding: 20px;
-    background: #000; /* Sfondo scuro */
+    background: #000; /* Sfondo nero */
     color: #fff; /* Testo bianco */
     border-radius: 10px; /* Angoli arrotondati */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Ombra */
 }
 
+/* Titolo */
 .about-title {
     font-family: 'Cinzel', serif;
     font-size: 2.5rem;
     color: #fff; /* Titolo bianco */
     margin-bottom: 20px;
-    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8); /* Leggera ombra per leggibilità */
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8); /* Leggera ombra per il titolo */
 }
 
+/* Paragrafi */
 .about-content p {
     font-family: 'Poppins', sans-serif;
     font-size: 1.2rem;
@@ -259,19 +261,18 @@ footer {
     margin-bottom: 20px;
 }
 
-.about-footer {
-    margin-top: 40px;
-    color: #fff; /* Testo bianco */
+/* Foto profilo */
+.profile-picture {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0; /* Spazio sopra e sotto */
 }
 
-.contact-link {
-    color: #fff; /* Link bianco */
-    text-decoration: none;
-    font-weight: bold;
+.profile-picture img.rounded-photo {
+    width: 150px; /* Larghezza e altezza della foto */
+    height: 150px;
+    border-radius: 50%; /* Rende la foto tonda */
+    border: 2px solid #fff; /* Bordo bianco */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Ombra */
+    object-fit: cover; /* Adatta la foto tonda */
 }
-
-.contact-link:hover {
-    text-decoration: underline;
-    color: #ddd; /* Colore più chiaro al passaggio del mouse */
-}
-
