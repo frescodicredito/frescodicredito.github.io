@@ -1,0 +1,67 @@
+---
+layout: default
+title: Experiments
+---
+
+<div class="experiments">
+  <header class="experiments-header">
+    <h1>Experiments</h1>
+    <p>Click the circle as quickly as you can to score points!</p>
+  </header>
+
+  <section class="game-container">
+    <h2>Click the Circle!</h2>
+    <div id="game-area">
+      <div id="circle"></div>
+    </div>
+    <p id="score">Score: 0</p>
+    <button id="start-game">Start Game</button>
+  </section>
+</div>
+
+<script>
+  const circle = document.getElementById("circle");
+  const gameArea = document.getElementById("game-area");
+  const scoreDisplay = document.getElementById("score");
+  const startButton = document.getElementById("start-game");
+
+  let score = 0;
+  let gameInterval;
+
+  function getRandomPosition() {
+    const x = Math.random() * (gameArea.offsetWidth - 50);
+    const y = Math.random() * (gameArea.offsetHeight - 50);
+    return { x, y };
+  }
+
+  function moveCircle() {
+    const { x, y } = getRandomPosition();
+    circle.style.left = `${x}px`;
+    circle.style.top = `${y}px`;
+  }
+
+  function startGame() {
+    score = 0;
+    scoreDisplay.textContent = "Score: 0";
+    moveCircle();
+    circle.style.display = "block";
+    gameInterval = setInterval(moveCircle, 1000);
+  }
+
+  function stopGame() {
+    clearInterval(gameInterval);
+    circle.style.display = "none";
+    alert(`Game Over! Your final score is ${score}`);
+  }
+
+  circle.addEventListener("click", () => {
+    score++;
+    scoreDisplay.textContent = `Score: ${score}`;
+    moveCircle();
+  });
+
+  startButton.addEventListener("click", () => {
+    startGame();
+    setTimeout(stopGame, 30000); // Stop game after 30 seconds
+  });
+</script>
