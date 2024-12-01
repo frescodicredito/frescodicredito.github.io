@@ -235,3 +235,41 @@ footer {
     margin-bottom: 15px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
+
+/* Stile principale per la pagina About Me */
+.about-me {
+  max-width: 600px; /* Larghezza massima della colonna centrale */
+  margin: 100px auto; /* Centra verticalmente e orizzontalmente */
+  text-align: center; /* Centra il testo */
+  padding: 20px;
+  background: #000; /* Sfondo scuro */
+  color: #fff; /* Testo bianco */
+  border-radius: 10px; /* Angoli arrotondati */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Ombra */
+}
+
+.about-title {
+  font-family: 'Cinzel', serif;
+  font-size: 2.5rem;
+  color: #f0a500; /* Colore evidenziato per il titolo */
+  margin-bottom: 20px;
+}
+
+.about-content p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.about-footer {
+  margin-top: 40px;
+}
+
+.contact-link {
+  color: #f0a500;
+  text-decoration: none;
+}
+
+.contact-link:hover {
+  text-decoration: underline;
+}
