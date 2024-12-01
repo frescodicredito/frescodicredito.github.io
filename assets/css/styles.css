@@ -19,7 +19,7 @@ body {
     width: 100%;
     height: 100%;
     z-index: -1;
-    overflow: hidden; /* Nasconde le parti che eccedono */
+    overflow: hidden;
 }
 
 .video-background iframe {
@@ -27,14 +27,12 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    min-width: 100%; /* Assicura che la larghezza minima sia il 100% */
-    min-height: 100%; /* Assicura che l'altezza minima sia il 100% */
-    width: auto; /* Permette di mantenere il rapporto d'aspetto */
-    height: auto; /* Permette di mantenere il rapporto d'aspetto */
-    pointer-events: none; /* Disabilita l'interazione con il video */
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    pointer-events: none;
 }
-
-
 
 .video-overlay {
     position: fixed;
@@ -46,7 +44,7 @@ body {
     z-index: 0;
 }
 
-/* Stile del menu */
+/* Menu generale */
 nav {
     background: rgba(0, 0, 0, 0.8);
     position: sticky;
@@ -54,155 +52,15 @@ nav {
     width: 100%;
     padding: 15px 0;
     text-align: center;
-    z-index: 2;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Ombra per maggiore visibilità */
-}
-
-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: white;
-    font-size: 1.2rem;
-    padding: 5px 10px;
-    font-weight: 600;
-    transition: color 0.3s ease;
-}
-
-nav ul li a:hover {
-    color: #f0a500;
-}
-
-/* Stile del contenuto */
-.content {
-    position: relative;
-    z-index: 1;
-    text-align: center;
-    padding: 20px;
-    max-width: 800px;
-    margin: 100px auto;
-}
-
-h1 {
-    font-family: 'Cinzel', serif;
-    font-size: 3rem;
-    margin: 0 auto 20px; /* Rimosso il margine superiore fisso */
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
-}
-
-p {
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.2rem;
-    font-weight: 400;
-    margin: 20px 0;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
-}
-
-/* Lista articoli */
-ul {
-    list-style: none;
-    padding: 0;
-}
-
-ul li {
-    margin: 15px 0;
-}
-
-ul li a {
-    text-decoration: none;
-    color: #f0a500;
-    font-size: 1.2rem;
-    font-weight: 600;
-    transition: color 0.3s ease;
-}
-
-ul li a:hover {
-    color: #ffd700;
-}
-
-/* Footer */
-footer {
-    position: fixed;
-    bottom: 10px;
-    width: 100%;
-    text-align: center;
-    font-size: 0.9rem;
-    color: #ddd;
-}
-
-/* Social Links */
-.social-links {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: flex;
-    gap: 20px;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.5s ease, visibility 0.5s ease;
-}
-
-.social-links a {
-    color: white;
-    font-size: clamp(1.5rem, 2vw, 2rem); /* Responsive font size */
-    text-decoration: none;
-}
-
-.social-links a:hover {
-    color: #f0a500;
-}
-
-.social-links.visible {
-    opacity: 1;
-    visibility: visible;
-}
-
-/* Media Queries */
-@media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .social-links a {
-        font-size: 1.5rem;
-    }
-
-    .content {
-        padding: 10px;
-        margin: 50px auto;
-    }
-
-    h1 {
-        font-size: 2.5rem;
-    }
-
-    p {
-        font-size: 1rem;
-    }
-}
-
-/* Stile del menu */
-nav {
-    position: relative;
-    background-color: #000;
-    padding: 15px;
     z-index: 10;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
 }
 
 .menu {
     list-style: none;
     padding: 0;
     margin: 0;
-    display: flex;
+    display: flex; /* Mostra il menu di default */
     justify-content: center;
     gap: 20px;
 }
@@ -223,47 +81,87 @@ nav {
     color: #f0a500;
 }
 
-/* Stile del menu per dispositivi mobili */
-.menu {
-    display: none; /* Nascondi il menu di default */
-    flex-direction: column;
-    background-color: #000;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    padding: 15px;
-    border-top: 1px solid #333;
-}
-
-.menu.visible {
-    display: flex; /* Mostra il menu quando attivato */
-}
-
-/* Stile dell'icona hamburger */
-.menu-toggle {
-    display: none;
-    flex-direction: column;
-    justify-content: space-around;
-    width: 30px;
-    height: 25px;
-    cursor: pointer;
-}
-
-.menu-toggle span {
-    background: white;
-    height: 3px;
-    width: 100%;
-    border-radius: 5px;
-}
-
-/* Mostra l'hamburger menu su dispositivi mobili */
+/* Menu mobile */
 @media (max-width: 768px) {
-    .menu-toggle {
-        display: flex;
-    }
-
     .menu {
-        display: none; /* Nascondi il menu di default */
+        display: none; /* Nascondi il menu per dispositivi mobili */
+        flex-direction: column;
+        background-color: #000;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        padding: 15px;
+        border-top: 1px solid #333;
     }
+    .menu.visible {
+        display: flex; /* Mostra il menu quando attivato */
+    }
+    .menu li {
+        text-align: center;
+        padding: 10px 0;
+    }
+    .menu-toggle {
+        display: flex; /* Mostra l'icona hamburger */
+        flex-direction: column;
+        justify-content: space-around;
+        width: 30px;
+        height: 25px;
+        cursor: pointer;
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        z-index: 20;
+    }
+    .menu-toggle span {
+        background: white;
+        height: 3px;
+        width: 100%;
+        border-radius: 5px;
+    }
+}
+
+/* Menu desktop */
+@media (min-width: 769px) {
+    .menu {
+        display: flex; /* Mostra il menu in orizzontale */
+    }
+    .menu-toggle {
+        display: none; /* Nascondi l'icona hamburger */
+    }
+}
+
+/* Stile del contenuto */
+.content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: 20px;
+    max-width: 800px;
+    margin: 100px auto;
+}
+
+h1 {
+    font-family: 'Cinzel', serif;
+    font-size: 3rem;
+    margin: 0 auto 20px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+}
+
+p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin: 20px 0;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+}
+
+/* Footer */
+footer {
+    position: fixed;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #ddd;
 }
