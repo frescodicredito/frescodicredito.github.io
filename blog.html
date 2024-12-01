@@ -1,14 +1,127 @@
----
-layout: default
-title: Blog
----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Blog - A space for thoughts, stories, and reflections.">
+  <title>Blog - Evolutionary Thinking</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Lora', serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      color: #fff;
+      background: #121212;
+    }
+    nav {
+      background: rgba(0, 0, 0, 0.8);
+      position: sticky;
+      top: 0;
+      width: 100%;
+      padding: 15px 0;
+      text-align: center;
+      z-index: 2;
+    }
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      font-size: 1.2rem;
+      padding: 5px 10px;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+    nav ul li a:hover {
+      color: #f0a500;
+    }
+    .content {
+      max-width: 800px;
+      margin: 50px auto;
+      padding: 20px;
+      text-align: center;
+    }
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+    .blog-post {
+      margin-bottom: 40px;
+      padding: 20px;
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.1);
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+    }
+    .blog-post h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      margin-bottom: 10px;
+      color: #f0a500;
+    }
+    .blog-post p {
+      font-size: 1rem;
+      margin-bottom: 10px;
+    }
+    .blog-post a {
+      text-decoration: none;
+      font-weight: 600;
+      color: #f0a500;
+      transition: color 0.3s ease;
+    }
+    .blog-post a:hover {
+      color: #fff;
+    }
+    footer {
+      text-align: center;
+      padding: 20px 0;
+      color: #ddd;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation Menu -->
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="#portfolio">Portfolio</a></li>
+      <li><a href="#experiments">Experiments</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
 
-<div class="content">
-  <h1>Blog</h1>
-  <p>Welcome to the blog! Explore articles on technology, innovation, and the intersection of mind, nature, and technology.</p>
-  <ul>
-    {% for post in site.posts %}
-    <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
-    {% endfor %}
-  </ul>
-</div>
+  <!-- Page Content -->
+  <div class="content">
+    <h1>Blog</h1>
+    <div class="blog-post">
+      <h2>Post Title 1</h2>
+      <p>Brief description or excerpt of the blog post. This is a place for a short teaser to invite the reader to continue.</p>
+      <a href="post1.html">Read more</a>
+    </div>
+    <div class="blog-post">
+      <h2>Post Title 2</h2>
+      <p>Another quick description for a different blog entry. Keep this concise but engaging.</p>
+      <a href="post2.html">Read more</a>
+    </div>
+    <div class="blog-post">
+      <h2>Post Title 3</h2>
+      <p>Third description here. Use this format to keep your blog posts consistent and inviting.</p>
+      <a href="post3.html">Read more</a>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2024 Evolutionary Thinking. All rights reserved.
+  </footer>
+</body>
+</html>
