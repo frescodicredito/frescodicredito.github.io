@@ -268,11 +268,12 @@ footer {
     margin: 20px 0; /* Spazio sopra e sotto */
 }
 
-.profile-picture img.rounded-photo {
-    width: 150px; /* Larghezza e altezza della foto */
+.rounded-photo {
+    width: 150px; /* Dimensioni della foto */
     height: 150px;
     border-radius: 50%; /* Rende la foto tonda */
-    border: 2px solid #fff; /* Bordo bianco */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Ombra */
-    object-fit: cover; /* Adatta la foto tonda */
+    object-fit: cover; /* Assicura che l'immagine si adatti bene al contenitore */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Ombra */
+    margin: 0 auto 20px; /* Centra la foto */
+    display: block;
 }
