@@ -1,9 +1,9 @@
 /* Importa i font da Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;600&family=Playfair+Display:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Cinzel:wght@400;700&display=swap');
 
 /* Stile globale */
 body {
-    font-family: 'Lora', serif;
+    font-family: 'Poppins', sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
@@ -85,13 +85,14 @@ nav ul li a:hover {
 }
 
 h1 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Cinzel', serif;
     font-size: 3rem;
     margin-top: 50px;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
 }
 
 p {
+    font-family: 'Poppins', sans-serif;
     font-size: 1.2rem;
     font-weight: 400;
     margin-top: 20px;
@@ -110,4 +111,22 @@ ul li {
 
 ul li a {
     text-decoration: none;
-    col
+    color: #f0a500;
+    font-size: 1.2rem;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+ul li a:hover {
+    color: #ffd700;
+}
+
+/* Footer */
+footer {
+    position: fixed;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #ddd;
+}
