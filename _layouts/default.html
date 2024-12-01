@@ -4,108 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ page.title }} - {{ site.title }}</title>
-  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
-  <style>
-    body {
-      font-family: 'Lora', serif;
-      line-height: 1.6;
-      margin: 0;
-      padding: 0;
-      color: #fff;
-      background-color: #000;
-      overflow: hidden;
-    }
-    .video-background {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: -1;
-    }
-    .video-background iframe {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: 177.78%;
-      height: 100%;
-      transform: translate(-50%, -50%);
-      pointer-events: none;
-    }
-    .video-overlay {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.5); /* Overlay scura per migliorare la leggibilità */
-      z-index: 0;
-    }
-    .content {
-      position: relative;
-      z-index: 1;
-      max-width: 800px;
-      margin: 100px auto;
-      padding: 20px;
-      text-align: center;
-    }
-    h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 3rem;
-      margin-bottom: 20px;
-    }
-    ul {
-      list-style: none;
-      padding: 0;
-    }
-    ul li {
-      margin: 15px 0;
-    }
-    ul li a {
-      text-decoration: none;
-      color: #f0a500;
-      font-size: 1.2rem;
-      font-weight: 600;
-      transition: color 0.3s ease;
-    }
-    ul li a:hover {
-      color: #ffd700;
-    }
-    nav {
-      background: rgba(0, 0, 0, 0.8);
-      position: sticky;
-      top: 0;
-      width: 100%;
-      padding: 15px 0;
-      text-align: center;
-    }
-    nav ul {
-      list-style: none;
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      padding: 0;
-    }
-    nav ul li a {
-      text-decoration: none;
-      color: white;
-      font-size: 1.2rem;
-      padding: 5px 10px;
-      font-weight: 600;
-      transition: color 0.3s ease;
-    }
-    nav ul li a:hover {
-      color: #f0a500;
-    }
-    footer {
-      text-align: center;
-      margin-top: 50px;
-      font-size: 0.9rem;
-      color: #ddd;
-    }
-  </style>
+  <!-- Collegamento al file CSS globale -->
+  <link rel="stylesheet" href="/assets/css/styles.css">
 </head>
 <body>
+  <!-- Video di sfondo -->
   <div class="video-background">
     <iframe src="https://player.vimeo.com/video/1034835015?badge=0&autoplay=1&loop=1&muted=1&background=1" 
       frameborder="0" 
@@ -115,12 +18,15 @@
   </div>
   <div class="video-overlay"></div>
   
+  <!-- Inclusione dell'intestazione -->
   {% include header.html %}
   
+  <!-- Contenuto principale -->
   <main>
     {{ content }}
   </main>
   
+  <!-- Inclusione del footer -->
   {% include footer.html %}
 </body>
 </html>
