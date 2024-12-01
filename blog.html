@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Blog - A space for thoughts, stories, and reflections.">
+  <meta name="description" content="Blog - Explore our thoughts and stories.">
   <title>Blog - Evolutionary Thinking</title>
   <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
   <style>
@@ -13,7 +13,32 @@
       margin: 0;
       padding: 0;
       color: #fff;
-      background: #121212;
+    }
+    .video-background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+    .video-background iframe {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 177.78%;
+      height: 100%;
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+    }
+    .video-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.6);
+      z-index: 0;
     }
     nav {
       background: rgba(0, 0, 0, 0.8);
@@ -44,45 +69,39 @@
       color: #f0a500;
     }
     .content {
-      max-width: 800px;
-      margin: 50px auto;
-      padding: 20px;
+      position: relative;
+      z-index: 1;
       text-align: center;
+      padding: 20px;
+      margin-top: 100px;
     }
     h1 {
       font-family: 'Playfair Display', serif;
-      font-size: 2.5rem;
-      margin-bottom: 20px;
+      font-size: 3rem;
+      margin-bottom: 50px;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
     }
-    .blog-post {
-      margin-bottom: 40px;
-      padding: 20px;
-      border-radius: 8px;
-      background: rgba(255, 255, 255, 0.1);
-      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
-    }
-    .blog-post h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: 2rem;
-      margin-bottom: 10px;
-      color: #f0a500;
-    }
-    .blog-post p {
-      font-size: 1rem;
-      margin-bottom: 10px;
-    }
-    .blog-post a {
-      text-decoration: none;
+    .blog-link {
+      font-size: 1.5rem;
       font-weight: 600;
+      margin-top: 20px;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+    }
+    .blog-link a {
+      text-decoration: none;
       color: #f0a500;
+      font-weight: 700;
       transition: color 0.3s ease;
     }
-    .blog-post a:hover {
-      color: #fff;
+    .blog-link a:hover {
+      color: #ffd700;
     }
     footer {
+      position: fixed;
+      bottom: 10px;
+      width: 100%;
       text-align: center;
-      padding: 20px 0;
+      font-size: 0.9rem;
       color: #ddd;
     }
   </style>
@@ -93,29 +112,28 @@
     <ul>
       <li><a href="index.html">Home</a></li>
       <li><a href="blog.html">Blog</a></li>
-      <li><a href="#portfolio">Portfolio</a></li>
-      <li><a href="#experiments">Experiments</a></li>
-      <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
 
+  <!-- Background Video -->
+  <div class="video-background">
+    <iframe src="https://player.vimeo.com/video/1034835015?badge=0&autoplay=1&loop=1&muted=1&background=1" 
+      frameborder="0" 
+      allow="autoplay; fullscreen; picture-in-picture" 
+      title="Background Video"
+      aria-label="Background video showing innovation and nature">
+    </iframe>
+  </div>
+  <!-- Overlay -->
+  <div class="video-overlay"></div>
+
   <!-- Page Content -->
   <div class="content">
-    <h1>Blog</h1>
-    <div class="blog-post">
-      <h2>Post Title 1</h2>
-      <p>Brief description or excerpt of the blog post. This is a place for a short teaser to invite the reader to continue.</p>
-      <a href="post1.html">Read more</a>
-    </div>
-    <div class="blog-post">
-      <h2>Post Title 2</h2>
-      <p>Another quick description for a different blog entry. Keep this concise but engaging.</p>
-      <a href="post2.html">Read more</a>
-    </div>
-    <div class="blog-post">
-      <h2>Post Title 3</h2>
-      <p>Third description here. Use this format to keep your blog posts consistent and inviting.</p>
-      <a href="post3.html">Read more</a>
+    <h1>Our Blog</h1>
+    <div class="blog-link">
+      <p>
+        <a href="notebooklm.html">NotebookLM: Smarter Notes, or Just Another AI Tool?</a>
+      </p>
     </div>
   </div>
 
