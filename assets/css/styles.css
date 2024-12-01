@@ -19,7 +19,7 @@ body {
     width: 100%;
     height: 100%;
     z-index: -1;
-    overflow: hidden; /* Assicura che il contenuto fuori dalla finestra venga nascosto */
+    overflow: hidden; /* Nasconde le parti che eccedono */
 }
 
 .video-background iframe {
@@ -27,11 +27,13 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 100vw; /* Imposta la larghezza al 100% della finestra */
-    height: 100vh; /* Imposta l'altezza al 100% della finestra */
+    min-width: 100%; /* Assicura che la larghezza minima sia il 100% */
+    min-height: 100%; /* Assicura che l'altezza minima sia il 100% */
+    width: auto; /* Permette di mantenere il rapporto d'aspetto */
+    height: auto; /* Permette di mantenere il rapporto d'aspetto */
     pointer-events: none; /* Disabilita l'interazione con il video */
-    object-fit: cover; /* Garantisce che il video si adatti perfettamente senza deformazioni */
 }
+
 
 
 .video-overlay {
