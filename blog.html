@@ -1,132 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Blog - Explore articles on technology, innovation, and AI from Evolutionary Thinking.">
-  <title>Blog - Evolutionary Thinking</title>
-  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
-  <style>
-    body {
-      font-family: 'Lora', serif;
-      line-height: 1.6;
-      margin: 0;
-      padding: 0;
-      overflow: hidden;
-      color: #fff;
-    }
-    .video-background {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: -1;
-    }
-    .video-background iframe {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: 177.78%;
-      height: 100%;
-      transform: translate(-50%, -50%);
-      pointer-events: none;
-    }
-    .video-overlay {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.6);
-      z-index: 0;
-    }
-    nav {
-      background: rgba(0, 0, 0, 0.8);
-      position: sticky;
-      top: 0;
-      width: 100%;
-      padding: 15px 0;
-      text-align: center;
-      z-index: 2;
-    }
-    nav ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-    }
-    nav ul li a {
-      text-decoration: none;
-      color: white;
-      font-size: 1.2rem;
-      padding: 5px 10px;
-      font-weight: 600;
-      transition: color 0.3s ease;
-    }
-    nav ul li a:hover {
-      color: #f0a500;
-    }
-    .content {
-      position: relative;
-      z-index: 1;
-      text-align: center;
-      padding: 20px;
-    }
-    h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 3rem;
-      margin-top: 100px;
-      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
-    }
-    p {
-      font-size: 1.5rem;
-      font-weight: 400;
-      margin-top: 20px;
-      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
-    }
-    footer {
-      position: fixed;
-      bottom: 10px;
-      width: 100%;
-      text-align: center;
-      font-size: 0.9rem;
-      color: #ddd;
-    }
-    ul.blog-list {
-      list-style-type: none;
-      padding: 0;
-    }
-    ul.blog-list li {
-      margin: 20px 0;
-    }
-    ul.blog-list li a {
-      text-decoration: none;
-      color: #f0a500;
-      font-size: 1.5rem;
-      transition: color 0.3s ease;
-    }
-    ul.blog-list li a:hover {
-      color: #ffd700;
-    }
-  </style>
-</head>
-<body>
-  <!-- Navigation Menu -->
-  <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="blog.html">Blog</a></li>
-      <li><a href="#portfolio">Portfolio</a></li>
-      <li><a href="#experiments">Experiments</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
+---
+layout: default
+title: Blog
+---
 
-  <!-- Background Video -->
-  <div class="video-background">
-    <iframe src="https://player.vimeo.com/video/1034835015?badge=0&autoplay=1&loop=1&muted=1&background=1" 
-      frameborder="0" 
-      allow="autoplay; fullscreen;
+<div class="video-background">
+  <iframe src="https://player.vimeo.com/video/1034835015?badge=0&autoplay=1&loop=1&muted=1&background=1" 
+    frameborder="0" 
+    allow="autoplay; fullscreen; picture-in-picture" 
+    title="Evolutionary Thinking Background Video"
+    aria-label="Background video showing innovation and nature">
+  </iframe>
+</div>
+<div class="video-overlay"></div>
+
+<div class="content">
+  <h1>Blog</h1>
+  <p>Welcome to the blog! Explore articles on technology, innovation, and the intersection of mind, nature, and technology.</p>
+  <ul>
+    {% for post in site.posts %}
+    <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
+    {% endfor %}
+  </ul>
+</div>
