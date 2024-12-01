@@ -50,6 +50,7 @@ nav {
     padding: 15px 0;
     text-align: center;
     z-index: 2;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Ombra per maggiore visibilità */
 }
 
 nav ul {
@@ -87,7 +88,7 @@ nav ul li a:hover {
 h1 {
     font-family: 'Cinzel', serif;
     font-size: 3rem;
-    margin-top: 50px;
+    margin: 0 auto 20px; /* Rimosso il margine superiore fisso */
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
 }
 
@@ -95,7 +96,7 @@ p {
     font-family: 'Poppins', sans-serif;
     font-size: 1.2rem;
     font-weight: 400;
-    margin-top: 20px;
+    margin: 20px 0;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
 }
 
@@ -131,29 +132,55 @@ footer {
     color: #ddd;
 }
 
+/* Social Links */
 .social-links {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  display: flex;
-  gap: 20px;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.5s ease, visibility 0.5s ease;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    gap: 20px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
 }
 
 .social-links a {
-  color: white;
-  font-size: 2rem;
-  text-decoration: none;
+    color: white;
+    font-size: clamp(1.5rem, 2vw, 2rem); /* Responsive font size */
+    text-decoration: none;
 }
 
 .social-links a:hover {
-  color: #f0a500;
+    color: #f0a500;
 }
 
 .social-links.visible {
-  opacity: 1;
-  visibility: visible;
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .social-links a {
+        font-size: 1.5rem;
+    }
+
+    .content {
+        padding: 10px;
+        margin: 50px auto;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
 }
