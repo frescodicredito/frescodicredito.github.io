@@ -84,7 +84,7 @@ nav {
 /* Menu mobile */
 @media (max-width: 768px) {
     .menu {
-        display: none; /* Nascondi il menu per dispositivi mobili */
+        display: none; /* Nascondi il menu di default */
         flex-direction: column;
         background-color: #000;
         position: absolute;
@@ -94,13 +94,16 @@ nav {
         padding: 15px;
         border-top: 1px solid #333;
     }
+
     .menu.visible {
         display: flex; /* Mostra il menu quando attivato */
     }
+
     .menu li {
         text-align: center;
         padding: 10px 0;
     }
+
     .menu-toggle {
         display: flex; /* Mostra l'icona hamburger */
         flex-direction: column;
@@ -113,6 +116,7 @@ nav {
         right: 20px;
         z-index: 20;
     }
+
     .menu-toggle span {
         background: white;
         height: 3px;
@@ -126,6 +130,7 @@ nav {
     .menu {
         display: flex; /* Mostra il menu in orizzontale */
     }
+
     .menu-toggle {
         display: none; /* Nascondi l'icona hamburger */
     }
@@ -164,4 +169,48 @@ footer {
     text-align: center;
     font-size: 0.9rem;
     color: #ddd;
+}
+
+/* Social Links */
+.social-links {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    gap: 20px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.social-links a {
+    color: white;
+    font-size: clamp(1.5rem, 2vw, 2rem); /* Responsive font size */
+    text-decoration: none;
+}
+
+.social-links a:hover {
+    color: #f0a500;
+}
+
+.social-links.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Media Queries per contenuto */
+@media (max-width: 768px) {
+    .content {
+        padding: 10px;
+        margin: 50px auto;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
 }
