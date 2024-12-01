@@ -132,30 +132,52 @@ nav {
     }
 }
 
-/* Stile del contenuto */
+/* Stile per la sezione Blog */
 .content {
-    position: relative;
-    z-index: 1;
     text-align: center;
+    margin: 20px auto;
     padding: 20px;
     max-width: 800px;
-    margin: 100px auto;
+    color: #fff; /* Testo bianco */
 }
 
-h1 {
-    font-family: 'Cinzel', serif;
-    font-size: 3rem;
-    margin: 0 auto 20px;
-    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8);
+.content h1 {
+    font-family: 'Cinzel', serif; /* Font coerente */
+    font-size: 2.5rem; /* Dimensione più grande */
+    margin-bottom: 20px;
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8); /* Ombra leggera */
+    color: #fff; /* Titolo bianco */
 }
 
-p {
+.content h2 {
     font-family: 'Poppins', sans-serif;
-    font-size: 1.2rem;
-    font-weight: 400;
+    font-size: 1.8rem;
     margin: 20px 0;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8); /* Ombra per leggibilità */
+    color: #fff; /* Colore bianco */
 }
+
+/* Stile per i link agli articoli */
+.content h2 a {
+    text-decoration: none;
+    color: #fff; /* Colore bianco */
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.content h2 a:hover {
+    color: #f0a500; /* Giallo al passaggio del mouse */
+    text-decoration: underline;
+}
+
+/* Testo dei paragrafi (se esistono) */
+.content p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #fff; /* Testo bianco */
+    margin: 10px 0;
+}
+
 
 /* Footer */
 footer {
