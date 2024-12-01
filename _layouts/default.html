@@ -6,14 +6,6 @@
   <title>{{ page.title }} - {{ site.title }}</title>
   <link rel="stylesheet" href="/assets/css/styles.css">
 </head>
-
-<script>
-  document.querySelector('.menu-toggle').addEventListener('click', function () {
-    const menu = document.querySelector('.menu');
-    menu.classList.toggle('visible');
-  });
-</script>
-  
 <body>
   <!-- Video di sfondo -->
   <div class="video-background">
@@ -51,5 +43,13 @@
   
   <!-- Inclusione del footer -->
   {% include footer.html %}
+
+  <!-- Script per il menu mobile -->
+  <script>
+    document.querySelector('.menu-toggle').addEventListener('click', function () {
+      const menu = document.querySelector('.menu');
+      menu.classList.toggle('visible');
+    });
+  </script>
 </body>
 </html>
