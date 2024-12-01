@@ -4,66 +4,69 @@ title: Experiments
 ---
 
 <div class="experiments">
-  <!-- Sezione Titolo -->
   <header class="experiments-header">
-    <h1 class="experiments-title">Experiments</h1>
-    <p>Explore interactive experiments and games that showcase creativity and technology.</p>
+    <h1 class="experiments-title">Digital Well-Being Test</h1>
+    <p>Take this quick test to assess your digital well-being habits.</p>
   </header>
 
-  <!-- Area di Gioco -->
-  <section class="game-container">
-    <h2>Click the Circle!</h2>
-    <div id="game-area">
-      <div id="circle"></div>
+  <section id="digital-wellbeing-test">
+    <form id="test-form">
+      <div class="question">
+        <h2>1. How much time do you spend on your phone daily?</h2>
+        <label><input type="radio" name="q1" value="1"> Less than 2 hours</label><br>
+        <label><input type="radio" name="q1" value="2"> 2-4 hours</label><br>
+        <label><input type="radio" name="q1" value="3"> More than 4 hours</label>
+      </div>
+      
+      <div class="question">
+        <h2>2. How often do you take breaks from screens?</h2>
+        <label><input type="radio" name="q2" value="3"> Regularly</label><br>
+        <label><input type="radio" name="q2" value="2"> Occasionally</label><br>
+        <label><input type="radio" name="q2" value="1"> Rarely</label>
+      </div>
+      
+      <div class="question">
+        <h2>3. Do you feel distracted by notifications?</h2>
+        <label><input type="radio" name="q3" value="1"> Often</label><br>
+        <label><input type="radio" name="q3" value="2"> Sometimes</label><br>
+        <label><input type="radio" name="q3" value="3"> Rarely</label>
+      </div>
+
+      <button type="button" id="submit-test">Submit Test</button>
+    </form>
+    
+    <div id="result" style="display: none;">
+      <h2>Your Digital Well-Being Score:</h2>
+      <p id="score"></p>
+      <p id="recommendation"></p>
     </div>
-    <p id="score">Score: 0</p>
-    <button id="start-game">Start Game</button>
   </section>
 </div>
 
 <script>
-  const circle = document.getElementById("circle");
-  const gameArea = document.getElementById("game-area");
-  const scoreDisplay = document.getElementById("score");
-  const startButton = document.getElementById("start-game");
+  document.getElementById("submit-test").addEventListener("click", function () {
+    const form = document.getElementById("test-form");
+    let score = 0;
 
-  let score = 0;
-  let gameInterval;
+    const answers = new FormData(form);
+    for (let value of answers.values()) {
+      score += parseInt(value, 10);
+    }
 
-  function getRandomPosition() {
-    const x = Math.random() * (gameArea.offsetWidth - 50);
-    const y = Math.random() * (gameArea.offsetHeight - 50);
-    return { x, y };
-  }
+    const result = document.getElementById("result");
+    const scoreDisplay = document.getElementById("score");
+    const recommendation = document.getElementById("recommendation");
 
-  function moveCircle() {
-    const { x, y } = getRandomPosition();
-    circle.style.left = `${x}px`;
-    circle.style.top = `${y}px`;
-  }
+    scoreDisplay.textContent = `You scored: ${score} out of 9`;
 
-  function startGame() {
-    score = 0;
-    scoreDisplay.textContent = "Score: 0";
-    moveCircle();
-    circle.style.display = "block";
-    gameInterval = setInterval(moveCircle, 1000);
-  }
+    if (score >= 7) {
+      recommendation.textContent = "Great job! You have excellent digital well-being habits.";
+    } else if (score >= 4) {
+      recommendation.textContent = "Your habits are decent, but there’s room for improvement.";
+    } else {
+      recommendation.textContent = "Consider reviewing your digital habits for better well-being.";
+    }
 
-  function stopGame() {
-    clearInterval(gameInterval);
-    circle.style.display = "none";
-    alert(`Game Over! Your final score is ${score}`);
-  }
-
-  circle.addEventListener("click", () => {
-    score++;
-    scoreDisplay.textContent = `Score: ${score}`;
-    moveCircle();
-  });
-
-  startButton.addEventListener("click", () => {
-    startGame();
-    setTimeout(stopGame, 30000); // Stop game after 30 seconds
+    result.style.display = "block";
   });
 </script>
