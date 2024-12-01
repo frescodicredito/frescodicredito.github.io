@@ -19,7 +19,7 @@ body {
     width: 100%;
     height: 100%;
     z-index: -1;
-    overflow: hidden;
+    overflow: hidden; /* Nasconde le parti che eccedono */
 }
 
 .video-background iframe {
@@ -27,12 +27,14 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    pointer-events: none;
+    min-width: 100%; /* Assicura che la larghezza minima sia il 100% */
+    min-height: 100%; /* Assicura che l'altezza minima sia il 100% */
+    width: auto; /* Permette di mantenere il rapporto d'aspetto */
+    height: auto; /* Permette di mantenere il rapporto d'aspetto */
+    pointer-events: none; /* Disabilita l'interazione con il video */
 }
+
+
 
 .video-overlay {
     position: fixed;
@@ -42,6 +44,150 @@ body {
     height: 100%;
     background: rgba(0, 0, 0, 0.6);
     z-index: 0;
+}
+
+/* Stile del menu */
+nav {
+    background: rgba(0, 0, 0, 0.8);
+    position: sticky;
+    top: 0;
+    width: 100%;
+    padding: 15px 0;
+    text-align: center;
+    z-index: 2;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Ombra per maggiore visibilità */
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    padding: 5px 10px;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #f0a500;
+}
+
+/* Stile del contenuto */
+.content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: 20px;
+    max-width: 800px;
+    margin: 100px auto;
+}
+
+h1 {
+    font-family: 'Cinzel', serif;
+    font-size: 3rem;
+    margin: 0 auto 20px; /* Rimosso il margine superiore fisso */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+}
+
+p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin: 20px 0;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+}
+
+/* Lista articoli */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    margin: 15px 0;
+}
+
+ul li a {
+    text-decoration: none;
+    color: #f0a500;
+    font-size: 1.2rem;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+ul li a:hover {
+    color: #ffd700;
+}
+
+/* Footer */
+footer {
+    position: fixed;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #ddd;
+}
+
+/* Social Links */
+.social-links {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    gap: 20px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.social-links a {
+    color: white;
+    font-size: clamp(1.5rem, 2vw, 2rem); /* Responsive font size */
+    text-decoration: none;
+}
+
+.social-links a:hover {
+    color: #f0a500;
+}
+
+.social-links.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .social-links a {
+        font-size: 1.5rem;
+    }
+
+    .content {
+        padding: 10px;
+        margin: 50px auto;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
 }
 
 /* Stile del menu */
@@ -59,6 +205,10 @@ nav {
     display: flex;
     justify-content: center;
     gap: 20px;
+}
+
+.menu li {
+    display: inline-block;
 }
 
 .menu li a {
@@ -84,7 +234,6 @@ nav {
     right: 0;
     padding: 15px;
     border-top: 1px solid #333;
-    z-index: 20;
 }
 
 .menu.visible {
@@ -99,7 +248,6 @@ nav {
     width: 30px;
     height: 25px;
     cursor: pointer;
-    z-index: 30;
 }
 
 .menu-toggle span {
@@ -118,34 +266,4 @@ nav {
     .menu {
         display: none; /* Nascondi il menu di default */
     }
-
-    .menu li {
-        text-align: center;
-        padding: 10px 0;
-    }
-}
-
-/* Stile del contenuto */
-.content {
-    position: relative;
-    z-index: 1;
-    text-align: center;
-    padding: 20px;
-    max-width: 800px;
-    margin: 100px auto;
-}
-
-h1 {
-    font-family: 'Cinzel', serif;
-    font-size: 3rem;
-    margin: 0 auto 20px;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
-}
-
-p {
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.2rem;
-    font-weight: 400;
-    margin: 20px 0;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
 }
