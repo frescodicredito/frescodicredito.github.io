@@ -341,78 +341,73 @@ footer {
     color: #ffd700; /* Giallo più chiaro al passaggio del mouse */
 }
 
-/* Stile per la pagina Experiments */
+/* Stile principale per la pagina Experiments */
 .experiments {
-    max-width: 600px; /* Larghezza massima della colonna centrale */
-    margin: 100px auto; /* Centra verticalmente e orizzontalmente */
-    text-align: center; /* Testo centrato */
+    max-width: 600px;
+    margin: 100px auto;
+    text-align: center;
+    color: #fff;
     padding: 20px;
-    background: #000; /* Sfondo nero */
-    color: #fff; /* Testo bianco */
-    border-radius: 10px; /* Angoli arrotondati */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Ombra */
+    background: #000;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
-/* Titolo principale */
+/* Titolo */
 .experiments-title {
     font-family: 'Cinzel', serif;
     font-size: 2.5rem;
-    color: #fff; /* Testo bianco */
-    margin-bottom: 20px;
-    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8); /* Leggera ombra per leggibilità */
-}
-
-/* Testo descrittivo */
-.experiments-header p {
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.2rem;
-    color: #fff; /* Testo bianco */
+    color: #fff;
     margin-bottom: 20px;
 }
 
-/* Area di Gioco */
-#game-area {
-    position: relative;
-    width: 100%;
-    height: 400px;
-    background: #222; /* Sfondo scuro per l'area di gioco */
-    border: 2px solid #f0a500; /* Bordo giallo */
+/* Stile delle domande */
+.question {
     margin: 20px 0;
-    overflow: hidden;
-    border-radius: 10px;
 }
 
-/* Cerchio da cliccare */
-#circle {
-    position: absolute;
-    width: 50px;
-    height: 50px;
-    background: #f0a500; /* Giallo */
-    border-radius: 50%; /* Cerchio */
-    display: none;
-    cursor: pointer;
-}
-
-/* Stile del punteggio */
-#score {
+.question h2 {
     font-size: 1.5rem;
-    margin: 10px 0;
-    color: #fff; /* Testo bianco */
+    color: #fff;
+    margin-bottom: 10px;
 }
 
-/* Pulsante di avvio */
-#start-game {
+.question label {
+    font-size: 1.2rem;
+    color: #fff;
+    display: block;
+    margin: 5px 0;
+}
+
+/* Pulsante di invio */
+#submit-test {
     padding: 10px 20px;
     font-size: 1rem;
-    color: #fff; /* Testo bianco */
-    background: #f0a500; /* Pulsante giallo */
+    background: #f0a500;
+    color: #000;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     transition: background 0.3s ease;
 }
 
-#start-game:hover {
-    background: #ffd700; /* Giallo chiaro al passaggio del mouse */
+#submit-test:hover {
+    background: #ffd700;
 }
+
+/* Stile del risultato */
+#result {
+    margin-top: 20px;
+}
+
+#result h2 {
+    font-size: 1.8rem;
+    color: #fff;
+}
+
+#result p {
+    font-size: 1.2rem;
+    color: #fff;
+}
+
 
