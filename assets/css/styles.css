@@ -60,13 +60,9 @@ nav {
     list-style: none;
     padding: 0;
     margin: 0;
-    display: flex; /* Mostra il menu di default */
+    display: flex;
     justify-content: center;
     gap: 20px;
-}
-
-.menu li {
-    display: inline-block;
 }
 
 .menu li a {
@@ -84,7 +80,7 @@ nav {
 /* Menu mobile */
 @media (max-width: 768px) {
     .menu {
-        display: none; /* Nascondi il menu di default */
+        display: none;
         flex-direction: column;
         background-color: #000;
         position: absolute;
@@ -96,7 +92,7 @@ nav {
     }
 
     .menu.visible {
-        display: flex; /* Mostra il menu quando attivato */
+        display: flex;
     }
 
     .menu li {
@@ -105,7 +101,7 @@ nav {
     }
 
     .menu-toggle {
-        display: flex; /* Mostra l'icona hamburger */
+        display: flex;
         flex-direction: column;
         justify-content: space-around;
         width: 30px;
@@ -128,11 +124,11 @@ nav {
 /* Menu desktop */
 @media (min-width: 769px) {
     .menu {
-        display: flex; /* Mostra il menu in orizzontale */
+        display: flex;
     }
 
     .menu-toggle {
-        display: none; /* Nascondi l'icona hamburger */
+        display: none;
     }
 }
 
@@ -150,7 +146,7 @@ h1 {
     font-family: 'Cinzel', serif;
     font-size: 3rem;
     margin: 0 auto 20px;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8);
 }
 
 p {
@@ -163,12 +159,13 @@ p {
 
 /* Footer */
 footer {
-    position: fixed;
-    bottom: 10px;
+    position: relative;
+    bottom: 0;
     width: 100%;
     text-align: center;
     font-size: 0.9rem;
     color: #ddd;
+    margin-top: 20px;
 }
 
 /* Social Links */
@@ -186,7 +183,7 @@ footer {
 
 .social-links a {
     color: white;
-    font-size: clamp(1.5rem, 2vw, 2rem); /* Responsive font size */
+    font-size: clamp(1.5rem, 2vw, 2rem);
     text-decoration: none;
 }
 
@@ -213,9 +210,7 @@ footer {
     p {
         font-size: 1rem;
     }
-}
 
-@media (max-width: 768px) {
     .blog-post h2 {
         font-size: 1.5rem;
     }
@@ -238,38 +233,39 @@ footer {
 
 /* Stile principale per la pagina About Me */
 .about-me {
-  max-width: 600px; /* Larghezza massima della colonna centrale */
-  margin: 100px auto; /* Centra verticalmente e orizzontalmente */
-  text-align: center; /* Centra il testo */
-  padding: 20px;
-  background: #000; /* Sfondo scuro */
-  color: #fff; /* Testo bianco */
-  border-radius: 10px; /* Angoli arrotondati */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Ombra */
+    max-width: 600px;
+    margin: 100px auto;
+    text-align: center;
+    padding: 20px;
+    background: #000;
+    color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
 .about-title {
-  font-family: 'Cinzel', serif;
-  font-size: 2.5rem;
-  color: #f0a500; /* Colore evidenziato per il titolo */
-  margin-bottom: 20px;
+    font-family: 'Cinzel', serif;
+    font-size: 2.5rem;
+    color: #f0a500;
+    margin-bottom: 20px;
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8);
 }
 
 .about-content p {
-  font-size: 1.2rem;
-  line-height: 1.8;
-  margin-bottom: 20px;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
 }
 
 .about-footer {
-  margin-top: 40px;
+    margin-top: 40px;
 }
 
 .contact-link {
-  color: #f0a500;
-  text-decoration: none;
+    color: #f0a500;
+    text-decoration: none;
 }
 
 .contact-link:hover {
-  text-decoration: underline;
+    text-decoration: underline;
 }
