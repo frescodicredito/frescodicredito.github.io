@@ -7,3 +7,13 @@
     <li><a href="{{ "/#contact" | relative_url }}">Contact</a></li>
   </ul>
 </nav>
+
+<script>
+  document.querySelector('a[href="#contact"]').addEventListener('click', function (e) {
+    e.preventDefault(); // Previeni il comportamento predefinito
+    const socialLinks = document.getElementById('contact');
+    if (socialLinks) {
+      socialLinks.classList.toggle('visible'); // Mostra/nascondi la sezione
+    }
+  });
+</script>
