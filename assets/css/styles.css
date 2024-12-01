@@ -231,41 +231,37 @@ footer {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
 
-/* Stile principale per gli articoli del blog */
+/* Stile per la sezione Blog */
 .blog-post {
-    color: #fff; /* Colore bianco per il testo */
-    font-family: 'Poppins', sans-serif; /* Font coerente */
-    font-size: 1.2rem; /* Dimensione del testo uniforme */
-    line-height: 1.8;
-    margin-bottom: 30px; /* Spaziatura tra articoli */
+    text-align: center;
+    margin: 20px auto;
     padding: 20px;
-    background: #000; /* Sfondo scuro */
-    border-radius: 10px; /* Angoli arrotondati */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Aggiunge un'ombra leggera */
-    text-align: left; /* Allineamento a sinistra */
+    max-width: 800px;
+    color: #fff; /* Testo bianco */
 }
 
-/* Titoli degli articoli */
 .blog-post h2 {
-    font-family: 'Cinzel', serif; /* Font per i titoli */
-    font-size: 1.8rem;
-    color: #fff; /* Colore bianco */
+    font-family: 'Cinzel', serif; /* Font coerente */
+    font-size: 1.8rem; /* Dimensione più grande */
     margin-bottom: 15px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8); /* Ombra leggera */
 }
 
-/* Link per leggere di più */
-.blog-post a.read-more {
-    color: #f0a500; /* Colore giallo per i link */
+.blog-post h2 a {
     text-decoration: none;
-    font-weight: 600;
-    font-size: 1rem;
-    display: inline-block;
-    margin-top: 10px;
+    color: #fff; /* Colore bianco */
+    transition: color 0.3s ease;
 }
 
-.blog-post a.read-more:hover {
-    text-decoration: underline;
-    color: #ffd700; /* Giallo più chiaro al passaggio del mouse */
+.blog-post h2 a:hover {
+    color: #f0a500; /* Giallo evidenziato al passaggio del mouse */
+}
+
+/* Generale per il contenuto */
+.content {
+    margin-top: 100px;
+    text-align: center;
+    color: #fff; /* Testo bianco */
 }
 
 
