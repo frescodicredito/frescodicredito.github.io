@@ -1,29 +1,45 @@
----
-layout: default
-title: About Me
----
+/* Stile principale per la pagina About Me */
+.about-me {
+    max-width: 600px;
+    margin: 100px auto;
+    text-align: center;
+    padding: 20px;
+    background: #000;
+    color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
 
-<div class="about-me">
-  <!-- Sezione Titolo -->
-  <header class="about-header">
-    <h1 class="about-title">Francesco Di Credico</h1>
-  </header>
+/* Titolo */
+.about-title {
+    font-family: 'Cinzel', serif;
+    font-size: 2.5rem;
+    color: #fff;
+    margin-bottom: 20px;
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8);
+}
 
-  <!-- Sezione Immagine Profilo -->
-  <div class="profile-picture">
-    <img src="/assets/images/fotomia.jpeg" alt="Francesco Di Credico" class="rounded-photo" />
-  </div>
+/* Foto profilo */
+.profile-picture {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
 
-  <!-- Sezione Biografia -->
-  <section class="about-content">
-    <p>
-      I’m Strategy Director at LiveXtension and a lecturer at Università Cattolica del Sacro Cuore, where I contribute to exploring the connections between digital innovation, sustainability, and the role of technology in enhancing well-being. Over the past decade, I’ve guided branding and communication strategies that merge creativity and data to achieve lasting, positive impact.
-    </p>
-    <p>
-      Fascinated by the interplay between the human mind and technology, I delve into how artificial intelligence can refine marketing and enrich our lives. In my free time, I write and share thoughts on the future of innovation and sustainability, always driven by the belief in the transformative power of ideas and authentic collaboration.
-    </p>
-    <p>
-      Let’s connect and explore new perspectives together.
-    </p>
-  </section>
-</div>
+.profile-picture img.rounded-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    object-fit: cover;
+}
+
+/* Biografia */
+.about-content p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: #fff;
+}
