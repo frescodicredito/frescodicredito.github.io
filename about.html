@@ -1,45 +1,29 @@
-/* Stile principale per la pagina About Me */
-.about-me {
-    max-width: 600px;
-    margin: 100px auto;
-    text-align: center;
-    padding: 20px;
-    background: #000;
-    color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-}
+---
+layout: default
+title: About Me
+---
 
-/* Titolo */
-.about-title {
-    font-family: 'Cinzel', serif;
-    font-size: 2.5rem;
-    color: #fff;
-    margin-bottom: 20px;
-    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8);
-}
+<div class="about-me">
+  <!-- Sezione Titolo -->
+  <header class="about-header">
+    <h1 class="about-title">Francesco Di Credico</h1>
+  </header>
 
-/* Foto profilo */
-.profile-picture {
-    display: flex;
-    justify-content: center;
-    margin: 20px 0;
-}
+  <!-- Sezione Immagine Profilo -->
+  <div class="profile-picture">
+    <img src="/assets/images/fotomia.jpeg" alt="Francesco Di Credico" class="rounded-photo" />
+  </div>
 
-.profile-picture img.rounded-photo {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    border: 2px solid #fff;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-    object-fit: cover;
-}
-
-/* Biografia */
-.about-content p {
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.2rem;
-    line-height: 1.8;
-    margin-bottom: 20px;
-    color: #fff;
-}
+  <!-- Sezione Biografia -->
+  <section class="about-content">
+    <p>
+      At LiveXtension, where I serve as Strategy Director, I thrive on uncovering emerging trends and transforming them into strategies that connect creativity with data to deliver meaningful impact. Alongside my work in the agency, I’m also engaged in teaching and corporate training, sharing insights and fostering a culture of curiosity and innovation.
+    </p>
+    <p>
+      I’m passionate about the intersection of technology and human connection, and how advancements like artificial intelligence can reshape not just marketing strategies but the way we approach challenges and opportunities in a digital world. For me, every project is an opportunity to blend vision and collaboration, creating solutions that resonate and endure.
+    </p>
+    <p>
+      If you’re interested in exploring bold ideas or fresh perspectives, let’s start a conversation.
+    </p>
+  </section>
+</div>
