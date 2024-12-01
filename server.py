@@ -4,17 +4,17 @@ from github import Github
 
 app = Flask(__name__)
 
-# Carica il token GitHub dalla variabile d'ambiente
+# Carica il token GitHub
 MY_GITHUB_TOKEN = os.environ.get("MY_GITHUB_TOKEN")
 if not MY_GITHUB_TOKEN:
     raise Exception("GitHub token non configurato correttamente")
 
-# Inizializza l'oggetto GitHub
+# Inizializza PyGithub
 g = Github(MY_GITHUB_TOKEN)
 
 @app.route('/read_repo', methods=['GET'])
 def read_repo():
-    """Leggi il contenuto della repository"""
+    """Leggi il contenuto di una repository"""
     repo_name = request.args.get('repo_name')
     if not repo_name:
         return jsonify({"error": "Specifica il nome della repository"}), 400
@@ -32,10 +32,29 @@ def read_repo():
             repo_structure.append({
                 "name": file_content.name,
                 "path": file_content.path,
-                "type": file_content.type
+                "type": file_content.type,
             })
 
         return jsonify(repo_structure)
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
+@app.route('/create_file', methods=['POST'])
+def create_file():
+    """Crea un nuovo file nella repository"""
+    data = request.json
+    repo_name = data.get('repo_name')
+    file_path = data.get('file_path')
+    content = data.get('content')
+    commit_message = data.get('commit_message', 'Creazione file')
+
+    if not all([repo_name, file_path, content]):
+        return jsonify({"error": "Dati mancanti"}), 400
+
+    try:
+        repo = g.get_repo(repo_name)
+        repo.create_file(file_path, commit_message, content)
+        return jsonify({"message": "File creato con successo"}), 201
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 
