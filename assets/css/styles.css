@@ -2,11 +2,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Cinzel:wght@400;700&display=swap');
 
 /* Stile globale */
+html, body {
+    height: 100%; /* Assicura che html e body riempiano tutta l'altezza della finestra */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column; /* Disposizione verticale */
+}
+
 body {
     font-family: 'Poppins', sans-serif;
     line-height: 1.6;
-    margin: 0;
-    padding: 0;
     color: #fff;
     background-color: #000;
 }
@@ -124,6 +130,7 @@ nav {
 
 /* Stile per il contenitore principale */
 main {
+    flex: 1; /* Spinge il footer verso il basso quando il contenuto è insufficiente */
     padding: 20px;
     max-width: 800px;
     margin: 0 auto;
@@ -179,13 +186,11 @@ main {
 
 /* Footer */
 footer {
-    position: relative;
-    bottom: 0;
     width: 100%;
     text-align: center;
     font-size: 0.9rem;
     color: #ddd;
     margin-top: 20px;
     padding: 10px 0;
-    background-color: #000; /* Aggiunge uno sfondo nero */
+    background-color: #000; /* Sfondo nero */
 }
