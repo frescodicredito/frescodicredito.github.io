@@ -1,14 +1,18 @@
 document.addEventListener("DOMContentLoaded", function () {
-  // Aggiungi listener al link "Blog"
-  const blogLink = document.querySelector('a[href="/blog/"]');
-  if (blogLink) {
-    blogLink.addEventListener("click", function (e) {
-      e.preventDefault(); // Previene il comportamento predefinito del link
+  // Aggiungi listener ai link del menu
+  const links = document.querySelectorAll('.menu li a[href^="/"]');
 
-      // Carica il contenuto del blog
-      fetch("/blog.html") // Percorso al file blog.html
+  links.forEach(link => {
+    link.addEventListener("click", function (e) {
+      e.preventDefault(); // Previene il comportamento predefinito
+
+      const target = this.getAttribute("href"); // Ottieni il percorso della pagina
+      const fetchTarget = target === "/" ? "/home.html" : target; // Se è Home, carica home.html
+
+      // Carica dinamicamente il contenuto
+      fetch(fetchTarget)
         .then((response) => {
-          if (!response.ok) throw new Error("Errore nel caricamento del blog.");
+          if (!response.ok) throw new Error(`Errore nel caricamento: ${fetchTarget}`);
           return response.text();
         })
         .then((html) => {
@@ -17,13 +21,13 @@ document.addEventListener("DOMContentLoaded", function () {
           if (mainContent) {
             const parser = new DOMParser();
             const doc = parser.parseFromString(html, "text/html");
-            const blogContent = doc.querySelector(".content");
-            mainContent.innerHTML = blogContent.innerHTML;
+            const dynamicContent = doc.querySelector(".content") || doc.body;
+            mainContent.innerHTML = dynamicContent.innerHTML;
           }
         })
         .catch((error) => {
           console.error("Errore:", error);
         });
     });
-  }
+  });
 });
