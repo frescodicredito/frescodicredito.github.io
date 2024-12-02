@@ -8,10 +8,27 @@
 
   <!-- Menu di navigazione -->
   <ul class="menu">
-    <li><a href="/">Home</a></li>
-    <li><a href="/blog.html">Blog</a></li>
-    <li><a href="/about.html">About Me</a></li>
-    <li><a href="/technoecologia.html">Technoecologia</a></li>
-    <li><a href="/contacts.html">Contacts</a></li>
+    <li><a href="{{ "/" | relative_url }}">Home</a></li>
+    <li><a href="{{ "/blog/" | relative_url }}">Blog</a></li>
+    <li><a href="{{ "/about/" | relative_url }}">About Me</a></li>
+    <li><a href="{{ "/experiments/" | relative_url }}">Experiments</a></li>
+    <li><a href="{{ "/#contact" | relative_url }}">Contact</a></li>
   </ul>
 </nav>
+
+<script>
+  // Script per il pulsante menu hamburger
+  document.querySelector('.menu-toggle').addEventListener('click', function () {
+    const menu = document.querySelector('.menu');
+    menu.classList.toggle('visible');
+  });
+
+  // Script per la sezione "Contact"
+  document.querySelector('a[href="#contact"]').addEventListener('click', function (e) {
+    e.preventDefault(); // Previeni il comportamento predefinito
+    const socialLinks = document.getElementById('contact');
+    if (socialLinks) {
+      socialLinks.classList.toggle('visible'); // Mostra/nascondi la sezione
+    }
+  });
+</script>
