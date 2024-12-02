@@ -1,54 +1,35 @@
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function (e) {
-    e.preventDefault();
-    const targetID = this.getAttribute('href');
-    const targetElement = document.querySelector(targetID);
-    if (targetElement) {
-      targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
-  });
-});
-
-document.addEventListener('DOMContentLoaded', () => {
-    const links = document.querySelectorAll('nav a');
-    const sections = document.querySelectorAll('.section');
-
-    links.forEach(link => {
-        link.addEventListener('click', (event) => {
-            event.preventDefault();
-            const sectionId = link.getAttribute('data-section');
-
-            // Rimuovi la classe active da tutte le sezioni
-            sections.forEach(section => section.classList.remove('active'));
-
-            // Aggiungi la classe active alla sezione selezionata
-            document.getElementById(sectionId).classList.add('active');
-        });
-    });
-});
-
 // Script per il pulsante menu hamburger
 document.querySelector('.menu-toggle').addEventListener('click', function () {
   const menu = document.querySelector('.menu');
   menu.classList.toggle('visible');
 });
 
-// Script per la navigazione tra le sezioni
+// Script per la navigazione tra le sezioni e caricamento dinamico del contenuto
 document.addEventListener('DOMContentLoaded', () => {
-  const links = document.querySelectorAll('nav a[data-section]');
-  const sections = document.querySelectorAll('.section');
+  const links = document.querySelectorAll('nav a[data-file]');
+  const contentArea = document.getElementById('content-area');
 
   links.forEach(link => {
     link.addEventListener('click', (event) => {
       event.preventDefault();
-      const sectionId = link.getAttribute('data-section');
+      const file = link.getAttribute('data-file');
 
-      // Rimuovi la classe active da tutte le sezioni
-      sections.forEach(section => section.classList.remove('active'));
-
-      // Aggiungi la classe active alla sezione selezionata
-      document.getElementById(sectionId).classList.add('active');
+      // Carica il contenuto tramite AJAX
+      fetch(file)
+        .then(response => {
+          if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+          }
+          return response.text();
+        })
+        .then(html => {
+          // Sostituisce il contenuto del contenitore
+          contentArea.innerHTML = html;
+        })
+        .catch(error => {
+          console.error('Errore nel caricamento del contenuto:', error);
+          contentArea.innerHTML = `<p>Sorry, the content could not be loaded.</p>`;
+        });
     });
   });
 });
-
