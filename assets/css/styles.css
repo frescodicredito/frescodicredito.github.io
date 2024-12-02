@@ -130,95 +130,22 @@ main {
     text-align: center;
 }
 
-/* Stile per le sezioni caricate dinamicamente */
-.content {
-    margin: 20px auto;
-    text-align: center;
-}
-
-/* Stile per la sezione About Me */
-.about-me {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    max-width: 600px;
-    margin: 50px auto;
-    text-align: center;
-    padding: 20px;
-    background: #004d4d;
-    color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-}
-
-/* Titolo principale */
-.about-title {
-    font-family: 'Cinzel', serif;
-    font-size: 2.5rem;
-    color: #fff;
-    margin-bottom: 20px;
-    text-transform: none;
-}
-
-/* Foto profilo */
-.profile-picture {
-    display: flex;
-    justify-content: center;
-    margin: 20px 0;
-}
-
-.profile-picture img.rounded-photo {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    border: 3px solid #fff;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-    object-fit: cover;
-}
-
-/* Testo della biografia */
-.about-content p {
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.2rem;
-    line-height: 1.8;
-    margin-bottom: 20px;
-    color: #fff;
-}
-
-/* Colore bianco per link già cliccati */
-.blog-post h2 a:visited {
-    color: #fff;
-}
-
-/* Footer */
-footer {
-    position: relative;
-    bottom: 0;
-    width: 100%;
-    text-align: center;
-    font-size: 0.9rem;
-    color: #ddd;
-    margin-top: 20px;
-}
-
 /* Stile per le icone Social nella sezione Contacts */
 .social-links {
     display: flex;
     justify-content: center;
-    gap: 30px; /* Spazio tra le icone */
+    gap: 30px;
     margin: 20px 0;
 }
 
 .social-links a {
     text-decoration: none;
-    color: #fff; /* Colore bianco */
-    font-size: 3rem; /* Dimensione delle icone */
+    color: #fff;
+    font-size: 3rem;
     transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .social-links a:hover {
-    color: #f0a500; /* Cambia colore al passaggio del mouse */
-    transform: scale(1.2); /* Effetto zoom */
+    color: #f0a500;
+    transform: scale(1.2);
 }
-
