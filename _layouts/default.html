@@ -1,34 +1,55 @@
-<nav>
-  <!-- Icona menu hamburger -->
-  <div class="menu-toggle">
-    <span></span>
-    <span></span>
-    <span></span>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title }} - {{ site.title }}</title>
+  <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+<body>
+  <!-- Video di sfondo -->
+  <div class="video-background">
+    <iframe src="https://player.vimeo.com/video/1034835015?badge=0&autoplay=1&loop=1&muted=1&background=1" 
+      frameborder="0" 
+      allow="autoplay; fullscreen; picture-in-picture" 
+      title="Evolutionary Thinking Background Video">
+    </iframe>
   </div>
+  <div class="video-overlay"></div>
+  
+  <!-- Inclusione dell'header -->
+  {% include header.html %}
+  
+  <!-- Contenuto principale -->
+  <main>
+    {{ content }}
+  </main>
+  
+  <!-- Sezione "Contact" -->
+  <div id="contact" class="social-links hidden">
+    <a href="https://facebook.com/yourpage" target="_blank" aria-label="Facebook">
+      <i class="fab fa-facebook-f"></i>
+    </a>
+    <a href="https://twitter.com/yourpage" target="_blank" aria-label="Twitter">
+      <i class="fab fa-twitter"></i>
+    </a>
+    <a href="https://instagram.com/yourpage" target="_blank" aria-label="Instagram">
+      <i class="fab fa-instagram"></i>
+    </a>
+    <a href="https://linkedin.com/in/yourprofile" target="_blank" aria-label="LinkedIn">
+      <i class="fab fa-linkedin-in"></i>
+    </a>
+  </div>
+  
+  <!-- Inclusione del footer -->
+  {% include footer.html %}
 
-  <!-- Menu di navigazione -->
-  <ul class="menu">
-    <li><a href="{{ "/" | relative_url }}">Home</a></li>
-    <li><a href="{{ "/blog/" | relative_url }}">Blog</a></li>
-    <li><a href="{{ "/about/" | relative_url }}">About Me</a></li>
-    <li><a href="{{ "/experiments/" | relative_url }}">Experiments</a></li>
-    <li><a href="{{ "/#contact" | relative_url }}">Contact</a></li>
-  </ul>
-</nav>
-
-<script>
-  // Script per il pulsante menu hamburger
-  document.querySelector('.menu-toggle').addEventListener('click', function () {
-    const menu = document.querySelector('.menu');
-    menu.classList.toggle('visible');
-  });
-
-  // Script per la sezione "Contact"
-  document.querySelector('a[href="#contact"]').addEventListener('click', function (e) {
-    e.preventDefault(); // Previeni il comportamento predefinito
-    const socialLinks = document.getElementById('contact');
-    if (socialLinks) {
-      socialLinks.classList.toggle('visible'); // Mostra/nascondi la sezione
-    }
-  });
-</script>
+  <!-- Script per il menu mobile -->
+  <script>
+    document.querySelector('.menu-toggle').addEventListener('click', function () {
+      const menu = document.querySelector('.menu');
+      menu.classList.toggle('visible');
+    });
+  </script>
+</body>
+</html>
