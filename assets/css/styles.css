@@ -275,6 +275,30 @@ footer {
     color: #fff; /* Testo bianco */
 }
 
+/* Colore per i link normali (non visitati) */
+a:link {
+    color: #fff; /* Bianco */
+    text-decoration: none; /* Rimuove la sottolineatura */
+}
+
+/* Colore per i link visitati */
+a:visited {
+    color: #fff; /* Bianco */
+    text-decoration: none; /* Rimuove la sottolineatura */
+}
+
+/* Colore per i link al passaggio del mouse */
+a:hover {
+    color: #f0a500; /* Giallo */
+    text-decoration: underline; /* Aggiunge sottolineatura */
+}
+
+/* Colore per i link attivi (quando cliccati) */
+a:active {
+    color: #f0a500; /* Giallo */
+}
+
+
 
 /* Stile principale per la pagina About Me */
 .about-me {
