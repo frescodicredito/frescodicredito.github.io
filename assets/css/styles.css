@@ -221,3 +221,11 @@ footer {
     color: #f0a500; /* Cambia colore al passaggio del mouse */
     transform: scale(1.2); /* Effetto zoom */
 }
+
+.section {
+    display: none;
+}
+.section.active {
+    display: block;
+}
+
