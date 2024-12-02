@@ -142,12 +142,12 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    max-width: 600px; /* Larghezza massima della colonna */
-    margin: 50px auto; /* Centra la colonna */
+    max-width: 600px;
+    margin: 50px auto;
     text-align: center;
     padding: 20px;
-    background: #004d4d; /* Colore verde acqua scuro tendente al blu */
-    color: #fff; /* Testo bianco */
+    background: #004d4d;
+    color: #fff;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
@@ -158,7 +158,7 @@ main {
     font-size: 2.5rem;
     color: #fff;
     margin-bottom: 20px;
-    text-transform: none; /* Mantiene il caso originale del testo */
+    text-transform: none;
 }
 
 /* Foto profilo */
@@ -169,12 +169,12 @@ main {
 }
 
 .profile-picture img.rounded-photo {
-    width: 150px; /* Dimensione della foto */
+    width: 150px;
     height: 150px;
-    border-radius: 50%; /* Rende l'immagine rotonda */
-    border: 3px solid #fff; /* Bordo bianco */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Ombra */
-    object-fit: cover; /* Adatta l'immagine */
+    border-radius: 50%;
+    border: 3px solid #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    object-fit: cover;
 }
 
 /* Testo della biografia */
@@ -183,12 +183,12 @@ main {
     font-size: 1.2rem;
     line-height: 1.8;
     margin-bottom: 20px;
-    color: #fff; /* Testo bianco */
+    color: #fff;
 }
 
 /* Colore bianco per link già cliccati */
 .blog-post h2 a:visited {
-    color: #fff; /* Colore bianco anche dopo clic */
+    color: #fff;
 }
 
 /* Footer */
@@ -206,26 +206,16 @@ footer {
 .social-links {
     display: flex;
     justify-content: center;
-    gap: 30px; /* Spazio tra le icone */
+    gap: 30px;
     margin: 20px 0;
 }
 
 .social-links a {
     text-decoration: none;
-    color: #fff; /* Colore bianco */
-    font-size: 4rem; /* Icone grandi */
+    color: #fff;
+    font-size: 4rem;
     transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .social-links a:hover {
-    color: #f0a500; /* Cambia colore al passaggio del mouse */
-    transform: scale(1.2); /* Effetto zoom */
-}
-
-.section {
-    display: none;
-}
-.section.active {
-    display: block;
-}
-
+    color: #f0a
