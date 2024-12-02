@@ -1,7 +1,27 @@
-title: "Evolutionary Thinking"
-description: "A dialogue between mind, nature, and technology."
+# Configurazione base
+title: "Technoecology"
+description: "Exploring the intersections of mind, nature, and technology."
 baseurl: "" # Lascia vuoto per GitHub Pages
 url: "https://frescodicredito.github.io"
+
+# Informazioni autore
+author:
+  name: "Your Name"
+  email: "youremail@example.com"
+
+# Tema personalizzato
+theme: null
+
+# Markdown e opzioni Kramdown
 markdown: kramdown
-theme: minima
-permalink: pretty
+kramdown:
+  input: GFM
+  hard_wrap: false
+
+# Layout predefiniti
+defaults:
+  - scope:
+      path: "_posts"
+      type: "posts"
+    values:
+      layout: "post"
