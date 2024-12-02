@@ -164,15 +164,29 @@ main {
     margin: 0 auto; /* Centra l'immagine */
 }
 
-/* Titoli nella sezione Blog */
-.blog-post h2 a {
-    text-decoration: none; /* Rimuove la sottolineatura */
-    color: #fff; /* Colore bianco per i titoli */
-    transition: color 0.3s ease;
+/* Titoli principali e secondari */
+h1, h2 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: #fff; /* Colore bianco */
+    margin-bottom: 10px;
 }
 
-.blog-post h2 a:visited {
-    color: #fff; /* Mantiene il colore bianco anche dopo il clic */
+h1 {
+    font-size: 2.5rem; /* Titoli principali */
+}
+
+h2 {
+    font-size: 2rem; /* Titoli secondari */
+}
+
+/* Testo delle sezioni */
+p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.3rem; /* Testo leggibile */
+    line-height: 1.8; /* Migliora leggibilità */
+    color: #fff;
+    margin-bottom: 20px;
 }
 
 /* Stile per le icone Social nella sezione Contacts */
@@ -186,8 +200,11 @@ main {
 .social-links a {
     text-decoration: none;
     color: #fff; /* Colore bianco */
-    font-size: 3rem; /* Icone grandi */
-    transition: transform 0.3s ease, color 0.3s ease;
+    font-size: 1.2rem; /* Dimensione ridotta per i nomi accanto alle icone */
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Spazio tra icona e testo */
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .social-links a:hover {
@@ -195,16 +212,10 @@ main {
     transform: scale(1.2); /* Effetto zoom */
 }
 
-.social-links i {
-    font-family: "Font Awesome 5 Brands", "Font Awesome 5 Free" !important;
-    font-style: normal;
-    font-weight: normal;
+.social-links .bi {
     font-size: 3rem; /* Dimensione delle icone */
     color: #fff !important; /* Forza il colore bianco */
-    display: inline-block;
 }
-
-
 
 /* Footer */
 footer {
