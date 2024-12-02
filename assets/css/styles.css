@@ -137,6 +137,21 @@ main {
     text-align: center;
 }
 
+
+/* Stile per la sezione Blog */
+.blog-post h2 a {
+    text-decoration: none; /* Rimuove la sottolineatura */
+    color: #fff; /* Colore bianco per i titoli */
+    transition: color 0.3s ease;
+}
+
+.blog-post h2 a:visited {
+    color: #fff; /* Mantiene il colore bianco anche dopo il clic */
+    text-decoration: none; /* Assicura che non venga aggiunta la sottolineatura */
+}
+
+
+
 /* Stile per la sezione About Me */
 .about-me {
     display: flex;
