@@ -196,12 +196,14 @@ main {
 }
 
 .social-links i {
-    font-family: "Font Awesome 5 Brands", "Font Awesome 5 Free"; /* Forza l'uso di Font Awesome */
+    font-family: "Font Awesome 5 Brands", "Font Awesome 5 Free" !important;
     font-style: normal;
     font-weight: normal;
     font-size: 3rem; /* Dimensione delle icone */
-    color: #fff; /* Colore bianco */
+    color: #fff !important; /* Forza il colore bianco */
+    display: inline-block;
 }
+
 
 
 /* Footer */
