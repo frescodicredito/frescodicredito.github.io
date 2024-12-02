@@ -1,110 +1,34 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ site.title }}</title>
-  <link rel="stylesheet" href="/assets/css/styles.css">
-</head>
-<body>
-  <!-- Video di sfondo -->
-  <div class="video-background">
-    <iframe src="https://player.vimeo.com/video/1034835015?badge=0&autoplay=1&loop=1&muted=1&background=1" 
-      frameborder="0" 
-      allow="autoplay; fullscreen; picture-in-picture" 
-      title="Background Video">
-    </iframe>
+<nav>
+  <!-- Icona menu hamburger -->
+  <div class="menu-toggle">
+    <span></span>
+    <span></span>
+    <span></span>
   </div>
-  <div class="video-overlay"></div>
-  
-  <!-- Menu -->
-  {% include header.html %}
-  
-  <!-- Contenuto principale -->
-  <main>
-    <!-- Sezione Home -->
-    <section id="home" class="visible">
-      <div class="content">
-        <h1>Evolutionary Thinking</h1>
-        <p>A dialogue between mind, nature, and technology.</p>
-      </div>
-    </section>
 
-    <!-- Sezione About Me -->
-    <section id="about-me" class="hidden">
-      <div class="about-me">
-        <header class="about-header">
-          <h1 class="about-title">Francesco Di Credico</h1>
-        </header>
-        <div class="profile-picture">
-          <img src="/assets/images/fotomia.jpeg" alt="Francesco Di Credico" class="rounded-photo" />
-        </div>
-        <section class="about-content">
-          <p>At LiveXtension, where I serve as Strategy Director...</p>
-          <p>Fascinated by the intersection of technology...</p>
-          <p>If you’re interested in exploring bold ideas...</p>
-        </section>
-      </div>
-    </section>
+  <!-- Menu di navigazione -->
+  <ul class="menu">
+    <li><a href="{{ "/" | relative_url }}">Home</a></li>
+    <li><a href="{{ "/blog/" | relative_url }}">Blog</a></li>
+    <li><a href="{{ "/about/" | relative_url }}">About Me</a></li>
+    <li><a href="{{ "/experiments/" | relative_url }}">Experiments</a></li>
+    <li><a href="{{ "/#contact" | relative_url }}">Contact</a></li>
+  </ul>
+</nav>
 
-    <!-- Sezione Blog -->
-    <section id="blog" class="hidden">
-      <div class="content">
-        <h1>Blog</h1>
-        <div class="blog-post">
-          <h2><a href="notebooklm.html">NotebookLM: Smarter Notes, or Just Another AI Tool?</a></h2>
-        </div>
-      </div>
-    </section>
+<script>
+  // Script per il pulsante menu hamburger
+  document.querySelector('.menu-toggle').addEventListener('click', function () {
+    const menu = document.querySelector('.menu');
+    menu.classList.toggle('visible');
+  });
 
-    <!-- Sezione Experiments -->
-    <section id="experiments" class="hidden">
-      <div class="experiments">
-        <header class="experiments-header">
-          <h1 class="experiments-title">Digital Well-Being Test</h1>
-          <p>Take this quick test to assess your digital well-being habits.</p>
-        </header>
-        <section id="digital-wellbeing-test">
-          <form id="test-form">
-            <!-- Test Domande -->
-            <div class="question">
-              <h2>1. How much time do you spend on your phone daily?</h2>
-              <label><input type="radio" name="q1" value="1"> Less than 2 hours</label><br>
-              <label><input type="radio" name="q1" value="2"> 2-4 hours</label><br>
-              <label><input type="radio" name="q1" value="3"> More than 4 hours</label>
-            </div>
-            <button type="button" id="submit-test">Submit Test</button>
-          </form>
-          <div id="result" style="display: none;">
-            <h2>Your Digital Well-Being Score:</h2>
-            <p id="score"></p>
-          </div>
-        </section>
-      </div>
-    </section>
-  </main>
-  
-  <footer>
-    <p>© 2024 {{ site.title }}. All rights reserved.</p>
-  </footer>
-
-  <!-- Script per il cambio di sezioni -->
-  <script>
-    document.querySelectorAll('.menu a').forEach(link => {
-      link.addEventListener('click', event => {
-        event.preventDefault();
-        const targetId = event.target.getAttribute('href').substring(1);
-        document.querySelectorAll('main section').forEach(section => {
-          section.classList.add('hidden');
-          section.classList.remove('visible');
-        });
-        const targetSection = document.getElementById(targetId);
-        if (targetSection) {
-          targetSection.classList.add('visible');
-          targetSection.classList.remove('hidden');
-        }
-      });
-    });
-  </script>
-</body>
-</html>
+  // Script per la sezione "Contact"
+  document.querySelector('a[href="#contact"]').addEventListener('click', function (e) {
+    e.preventDefault(); // Previeni il comportamento predefinito
+    const socialLinks = document.getElementById('contact');
+    if (socialLinks) {
+      socialLinks.classList.toggle('visible'); // Mostra/nascondi la sezione
+    }
+  });
+</script>
