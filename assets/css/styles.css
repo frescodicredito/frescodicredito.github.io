@@ -34,7 +34,6 @@ body {
     pointer-events: none;
 }
 
-
 /* Menu generale */
 nav {
     background: rgba(0, 0, 0, 0.8);
@@ -123,50 +122,54 @@ nav {
     }
 }
 
-/* Stile per la sezione Blog */
-.content {
-    text-align: center;
-    margin: 20px auto;
+/* Stile per il contenitore principale */
+main {
     padding: 20px;
     max-width: 800px;
-    color: #fff; /* Testo bianco */
+    margin: 0 auto;
+    text-align: center;
 }
 
+/* Stile per le sezioni caricate dinamicamente */
+.content {
+    margin: 20px auto;
+    text-align: center;
+}
+
+/* Stile per il testo */
 .content h1 {
-    font-family: 'Cinzel', serif; /* Font coerente */
-    font-size: 2.5rem; /* Dimensione più grande */
+    font-family: 'Cinzel', serif;
+    font-size: 2.5rem;
     margin-bottom: 20px;
-    color: #fff; /* Titolo bianco */
+    color: #fff;
 }
 
 .content h2 {
     font-family: 'Poppins', sans-serif;
     font-size: 1.8rem;
     margin: 20px 0;
-    color: #fff; /* Colore bianco */
+    color: #fff;
 }
 
-/* Stile per i link agli articoli */
+/* Stile per i link */
 .content h2 a {
     text-decoration: none;
-    color: #fff; /* Colore bianco */
+    color: #fff;
     font-weight: bold;
     transition: color 0.3s ease;
 }
 
 .content h2 a:hover {
-    color: #f0a500; /* Giallo al passaggio del mouse */
+    color: #f0a500;
     text-decoration: underline;
 }
 
-/* Testo dei paragrafi (se esistono) */
 .content p {
     font-size: 1.2rem;
     line-height: 1.8;
-    color: #fff; /* Testo bianco */
+    color: #fff;
     margin: 10px 0;
 }
-
 
 /* Footer */
 footer {
@@ -205,212 +208,4 @@ footer {
 .social-links.visible {
     opacity: 1;
     visibility: visible;
-}
-
-/* Media Queries per contenuto */
-@media (max-width: 768px) {
-    .content {
-        padding: 10px;
-        margin: 50px auto;
-    }
-
-    h1 {
-        font-size: 2.5rem;
-    }
-
-    p {
-        font-size: 1rem;
-    }
-
-    .blog-post h2 {
-        font-size: 1.5rem;
-    }
-
-    .blog-post p {
-        font-size: 0.9rem;
-    }
-
-    .blog-post .read-more {
-        font-size: 0.9rem;
-    }
-}
-
-.blog-post img {
-    width: 100%;
-    border-radius: 10px;
-    margin-bottom: 15px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-}
-
-/* Stile per la sezione Blog */
-.blog-post {
-    text-align: center;
-    margin: 20px auto;
-    padding: 20px;
-    max-width: 800px;
-    color: #fff; /* Testo bianco */
-}
-
-.blog-post h2 {
-    font-family: 'Cinzel', serif; /* Font coerente */
-    font-size: 1.8rem; /* Dimensione più grande */
-    margin-bottom: 15px;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8); /* Ombra leggera */
-}
-
-.blog-post h2 a {
-    text-decoration: none;
-    color: #fff; /* Colore bianco */
-    transition: color 0.3s ease;
-}
-
-.blog-post h2 a:hover {
-    color: #f0a500; /* Giallo evidenziato al passaggio del mouse */
-}
-
-/* Generale per il contenuto */
-.content {
-    margin-top: 100px;
-    text-align: center;
-    color: #fff; /* Testo bianco */
-}
-
-/* Colore per i link normali (non visitati) */
-a:link {
-    color: #fff; /* Bianco */
-    text-decoration: none; /* Rimuove la sottolineatura */
-}
-
-/* Colore per i link visitati */
-a:visited {
-    color: #fff; /* Bianco */
-    text-decoration: none; /* Rimuove la sottolineatura */
-}
-
-/* Colore per i link al passaggio del mouse */
-a:hover {
-    color: #f0a500; /* Giallo */
-    text-decoration: underline; /* Aggiunge sottolineatura */
-}
-
-/* Colore per i link attivi (quando cliccati) */
-a:active {
-    color: #f0a500; /* Giallo */
-}
-
-
-
-/* Stile principale per la pagina About Me */
-.about-me {
-    max-width: 600px;
-    margin: 100px auto;
-    text-align: center;
-    padding: 20px;
-    background: #000; /* Sfondo nero */
-    color: #fff; /* Testo bianco */
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-}
-
-/* Titolo principale */
-.about-title {
-    font-family: 'Cinzel', serif; /* Font coerente con le altre pagine */
-    font-size: 2.5rem;
-    color: #fff; /* Testo bianco */
-    margin-bottom: 20px;
-}
-
-/* Foto profilo */
-.profile-picture {
-    display: flex;
-    justify-content: center;
-    margin: 20px 0;
-}
-
-.profile-picture img.rounded-photo {
-    width: 150px; /* Larghezza e altezza della foto */
-    height: 150px;
-    border-radius: 50%; /* Rende la foto tonda */
-    border: 2px solid #fff; /* Bordo bianco */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Ombra */
-    object-fit: cover; /* Adatta la foto tonda */
-}
-
-/* Sezione biografia */
-.about-content p {
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.2rem;
-    line-height: 1.8;
-    margin-bottom: 20px;
-    color: #fff; /* Testo bianco */
-}
-
-
-/* Stile principale per la pagina Experiments */
-.experiments {
-    max-width: 600px;
-    margin: 100px auto;
-    text-align: center;
-    color: #fff;
-    padding: 20px;
-    background: #000;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-}
-
-/* Titolo */
-.experiments-title {
-    font-family: 'Cinzel', serif;
-    font-size: 2.5rem;
-    color: #fff;
-    margin-bottom: 20px;
-}
-
-/* Stile delle domande */
-.question {
-    margin: 20px 0;
-}
-
-.question h2 {
-    font-size: 1.5rem;
-    color: #fff;
-    margin-bottom: 10px;
-}
-
-.question label {
-    font-size: 1.2rem;
-    color: #fff;
-    display: block;
-    margin: 5px 0;
-}
-
-/* Pulsante di invio */
-#submit-test {
-    padding: 10px 20px;
-    font-size: 1rem;
-    background: #f0a500;
-    color: #000;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background 0.3s ease;
-}
-
-#submit-test:hover {
-    background: #ffd700;
-}
-
-/* Stile del risultato */
-#result {
-    margin-top: 20px;
-}
-
-#result h2 {
-    font-size: 1.8rem;
-    color: #fff;
-}
-
-#result p {
-    font-size: 1.2rem;
-    color: #fff;
 }
