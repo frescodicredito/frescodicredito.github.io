@@ -215,3 +215,18 @@ footer {
     color: #f0a500; /* Cambia colore al passaggio del mouse */
     transform: scale(1.2); /* Effetto zoom */
 }
+
+/* Stile per la sezione Technoecologia */
+.content h1 {
+    font-family: 'Cinzel', serif;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.content p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #fff;
+    margin: 10px 0;
+}
