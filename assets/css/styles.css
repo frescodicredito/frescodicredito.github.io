@@ -196,30 +196,22 @@ footer {
     margin-top: 20px;
 }
 
-/* Social Links */
+/* Stile per le icone Social nella sezione Contacts */
 .social-links {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     display: flex;
-    gap: 20px;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.5s ease, visibility 0.5s ease;
+    justify-content: center;
+    gap: 30px; /* Spazio tra le icone */
+    margin: 20px 0;
 }
 
 .social-links a {
-    color: white;
-    font-size: clamp(1.5rem, 2vw, 2rem);
     text-decoration: none;
+    color: #fff; /* Colore bianco */
+    font-size: 4rem; /* Icone grandi */
+    transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .social-links a:hover {
-    color: #f0a500;
-}
-
-.social-links.visible {
-    opacity: 1;
-    visibility: visible;
+    color: #f0a500; /* Cambia colore al passaggio del mouse */
+    transform: scale(1.2); /* Effetto zoom */
 }
