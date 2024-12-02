@@ -130,12 +130,6 @@ main {
     text-align: center;
 }
 
-/* Stile per le sezioni caricate dinamicamente */
-.content {
-    margin: 20px auto;
-    text-align: center;
-}
-
 /* Stile per la sezione About Me */
 .about-me {
     display: flex;
@@ -152,22 +146,6 @@ main {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
-/* Titolo principale */
-.about-title {
-    font-family: 'Cinzel', serif;
-    font-size: 2.5rem;
-    color: #fff;
-    margin-bottom: 20px;
-    text-transform: none; /* Mantiene il caso originale del testo */
-}
-
-/* Foto profilo */
-.profile-picture {
-    display: flex;
-    justify-content: center;
-    margin: 20px 0;
-}
-
 .profile-picture img.rounded-photo {
     width: 150px; /* Dimensione della foto */
     height: 150px;
@@ -175,31 +153,8 @@ main {
     border: 3px solid #fff; /* Bordo bianco */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Ombra */
     object-fit: cover; /* Adatta l'immagine */
-}
-
-/* Testo della biografia */
-.about-content p {
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.2rem;
-    line-height: 1.8;
-    margin-bottom: 20px;
-    color: #fff; /* Testo bianco */
-}
-
-/* Colore bianco per link già cliccati */
-.blog-post h2 a:visited {
-    color: #fff; /* Colore bianco anche dopo clic */
-}
-
-/* Footer */
-footer {
-    position: relative;
-    bottom: 0;
-    width: 100%;
-    text-align: center;
-    font-size: 0.9rem;
-    color: #ddd;
-    margin-top: 20px;
+    display: block; /* Assicura che l'immagine sia trattata come blocco */
+    margin: 0 auto; /* Centra l'immagine */
 }
 
 /* Stile per le icone Social nella sezione Contacts */
@@ -213,11 +168,24 @@ footer {
 .social-links a {
     text-decoration: none;
     color: #fff; /* Colore bianco */
-    font-size: 4rem; /* Icone grandi */
+    font-size: 3rem; /* Icone grandi */
     transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .social-links a:hover {
     color: #f0a500; /* Cambia colore al passaggio del mouse */
     transform: scale(1.2); /* Effetto zoom */
+}
+
+/* Footer */
+footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #ddd;
+    margin-top: 20px;
+    padding: 10px 0;
+    background-color: #000; /* Aggiunge uno sfondo nero */
 }
