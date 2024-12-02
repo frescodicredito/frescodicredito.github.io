@@ -195,6 +195,15 @@ main {
     transform: scale(1.2); /* Effetto zoom */
 }
 
+.social-links i {
+    font-family: "Font Awesome 5 Brands", "Font Awesome 5 Free"; /* Forza l'uso di Font Awesome */
+    font-style: normal;
+    font-weight: normal;
+    font-size: 3rem; /* Dimensione delle icone */
+    color: #fff; /* Colore bianco */
+}
+
+
 /* Footer */
 footer {
     width: 100%;
