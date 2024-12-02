@@ -164,6 +164,17 @@ main {
     margin: 0 auto; /* Centra l'immagine */
 }
 
+/* Titoli nella sezione Blog */
+.blog-post h2 a {
+    text-decoration: none; /* Rimuove la sottolineatura */
+    color: #fff; /* Colore bianco per i titoli */
+    transition: color 0.3s ease;
+}
+
+.blog-post h2 a:visited {
+    color: #fff; /* Mantiene il colore bianco anche dopo il clic */
+}
+
 /* Stile per le icone Social nella sezione Contacts */
 .social-links {
     display: flex;
