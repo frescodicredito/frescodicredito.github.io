@@ -206,16 +206,19 @@ footer {
 .social-links {
     display: flex;
     justify-content: center;
-    gap: 30px;
+    gap: 30px; /* Spazio tra le icone */
     margin: 20px 0;
 }
 
 .social-links a {
     text-decoration: none;
-    color: #fff;
-    font-size: 4rem;
-    transition: transform 0.3s ease, color 0.3s ease;
+    color: #fff; /* Colore bianco */
+    font-size: 3rem; /* Dimensione delle icone */
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .social-links a:hover {
-    color: #f0a
+    color: #f0a500; /* Cambia colore al passaggio del mouse */
+    transform: scale(1.2); /* Effetto zoom */
+}
+
