@@ -133,14 +133,14 @@ nav {
 
 .content h1 {
     font-family: 'Cinzel', serif;
-    font-size: 2.5rem;
+    font-size: 3rem; /* Dimensione aumentata */
     margin-bottom: 20px;
-    color: #fff;
+    color: #fff; /* Titolo bianco */
 }
 
 .content h2 {
     font-family: 'Cinzel', serif; /* Stile coerente */
-    font-size: 2rem; /* Dimensione maggiore */
+    font-size: 2.5rem; /* Dimensione ancora maggiore */
     margin: 20px 0;
     color: #fff; /* Colore bianco */
 }
@@ -164,9 +164,9 @@ nav {
 
 /* Testo dei paragrafi */
 .content p {
-    font-size: 1.2rem;
+    font-size: 1.5rem; /* Dimensione aumentata */
     line-height: 1.8;
-    color: #fff;
+    color: #fff; /* Testo bianco */
     margin: 10px 0;
 }
 
@@ -176,7 +176,7 @@ footer {
     bottom: 0;
     width: 100%;
     text-align: center;
-    font-size: 0.9rem;
+    font-size: 1rem; /* Leggermente più grande */
     color: #ddd;
     margin-top: 20px;
 }
@@ -186,24 +186,4 @@ footer {
     margin-top: 100px;
     text-align: center;
     color: #fff; /* Testo bianco */
-}
-
-/* Stile principale per la pagina About Me */
-.about-me {
-    max-width: 600px;
-    margin: 100px auto;
-    text-align: center;
-    padding: 20px;
-    background: #000;
-    color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-}
-
-/* Titolo principale */
-.about-title {
-    font-family: 'Cinzel', serif;
-    font-size: 2.5rem;
-    color: #fff;
-    margin-bottom: 20px;
 }
