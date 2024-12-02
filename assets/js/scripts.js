@@ -8,3 +8,22 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     }
   });
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const links = document.querySelectorAll('nav a');
+    const sections = document.querySelectorAll('.section');
+
+    links.forEach(link => {
+        link.addEventListener('click', (event) => {
+            event.preventDefault();
+            const sectionId = link.getAttribute('data-section');
+
+            // Rimuovi la classe active da tutte le sezioni
+            sections.forEach(section => section.classList.remove('active'));
+
+            // Aggiungi la classe active alla sezione selezionata
+            document.getElementById(sectionId).classList.add('active');
+        });
+    });
+});
+
