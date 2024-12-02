@@ -150,6 +150,44 @@ main {
     text-decoration: none; /* Assicura che non venga aggiunta la sottolineatura */
 }
 
+.post-content {
+    background-color: #000; /* Sfondo nero */
+    color: #fff; /* Testo bianco */
+    max-width: 800px; /* Limita la larghezza per migliorare la leggibilità */
+    margin: 50px auto; /* Centra il contenuto */
+    padding: 30px; /* Aggiunge spaziatura interna */
+    border-radius: 10px; /* Angoli arrotondati */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Aggiunge un'ombra elegante */
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.8; /* Migliora la leggibilità */
+}
+
+.post-content h1, .post-content h2 {
+    color: #f0a500; /* Colore per i titoli */
+    margin-bottom: 20px;
+}
+
+.post-content p {
+    font-size: 1.2rem; /* Testo leggibile */
+    margin-bottom: 20px;
+}
+
+.post-content blockquote {
+    background-color: #1a1a1a; /* Sfondo grigio scuro */
+    padding: 20px;
+    border-left: 5px solid #f0a500; /* Evidenziazione del blocco */
+    margin: 20px 0;
+    color: #ccc; /* Testo grigio chiaro */
+}
+
+.post-content ul, .post-content ol {
+    margin: 20px 0;
+    padding-left: 40px; /* Indenta gli elenchi */
+}
+
+.post-content li {
+    margin-bottom: 10px; /* Spazio tra gli elementi della lista */
+}
 
 
 /* Stile per la sezione About Me */
