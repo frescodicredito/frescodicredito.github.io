@@ -2,6 +2,7 @@
 layout: post
 title: "NotebookLM: Smarter Notes, or Just Another AI Tool?"
 date: 2024-01-01
+categories: blog
 ---
 Let’s be honest: organizing your notes can feel like a never-ending battle. You write them, forget them, and then, when you need them most, they’re a chaotic mess. Google’s NotebookLM promises to fix this. It’s not just a place to dump your thoughts; it claims to help you understand, organize, and even get new insights from your own words. Sounds dreamy, right? But does it deliver?
 
