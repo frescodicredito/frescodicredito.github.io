@@ -25,3 +25,6 @@ defaults:
       type: "posts"
     values:
       layout: "post"
+
+# Permalink
+permalink: /blog/:title/
