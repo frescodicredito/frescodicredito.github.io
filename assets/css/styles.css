@@ -197,7 +197,7 @@ main {
     align-items: center;
     justify-content: center;
     max-width: 600px; /* Larghezza massima della colonna */
-    margin: 50px auto; /* Centra la colonna */
+    margin: 20px auto; /* Centra la colonna */
     text-align: center;
     padding: 20px;
     background: #001f3f; /* Dark slate blue */
