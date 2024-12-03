@@ -245,30 +245,34 @@ p {
 /* Stile per le icone Social nella sezione Contacts */
 .social-links {
     display: flex;
-    justify-content: center;
-    gap: 30px; /* Spazio tra le icone */
-    margin: 20px 0;
+    flex-direction: column; /* Disposizione verticale */
+    align-items: center; /* Centra orizzontalmente */
+    justify-content: center; /* Centra verticalmente */
+    gap: 40px; /* Spazio tra le icone */
+    margin-top: 100px; /* Spazio dall'inizio della pagina */
+    height: calc(100vh - 200px); /* Adatta l'altezza per centrare nella finestra */
 }
 
 .social-links a {
     text-decoration: none;
     color: #fff; /* Colore bianco */
-    font-size: 1.2rem; /* Dimensione ridotta per i nomi accanto alle icone */
+    font-size: 1.5rem; /* Aumenta la dimensione del testo */
     display: flex;
-    align-items: center;
-    gap: 10px; /* Spazio tra icona e testo */
+    align-items: center; /* Allinea icona e testo */
+    gap: 15px; /* Spazio tra l'icona e il testo */
     transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .social-links a:hover {
-    color: #f0a500; /* Cambia colore al passaggio del mouse */
-    transform: scale(1.2); /* Effetto zoom */
+    color: #f0a500; /* Colore hover */
+    transform: scale(1.15); /* Leggero zoom al passaggio del mouse */
 }
 
-.social-links .bi {
-    font-size: 3rem; /* Dimensione delle icone */
-    color: #fff !important; /* Forza il colore bianco */
+.social-links .fab, .social-links .fas {
+    font-size: 3.5rem; /* Ingrandisce le icone */
+    color: #fff !important; /* Mantiene il colore bianco */
 }
+
 
 /* Footer */
 footer {
