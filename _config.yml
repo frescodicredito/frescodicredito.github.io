@@ -19,7 +19,7 @@ author:
   email: "youremail@example.com"
 
 # Tema personalizzato
-theme: jekyll-theme-slate
+theme: null
 
 # Markdown e opzioni Kramdown
 markdown: kramdown
