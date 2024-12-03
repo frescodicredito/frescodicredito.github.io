@@ -18,7 +18,35 @@
       margin: 0;
       padding: 0;
       color: #fff;
-      background-color: #000; /* Sfondo nero */
+      background-color: #000; /* Sfondo di riserva */
+    }
+
+    /* Video di sfondo */
+    .video-background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1; /* Posiziona il video dietro il contenuto */
+      overflow: hidden;
+    }
+
+    .video-background iframe {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* Adatta il video allo schermo */
+    }
+
+    /* Sovrapposizione scura sopra il video */
+    .video-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.6); /* Effetto scuro sopra il video */
+      z-index: 0;
     }
 
     .back-to-home {
@@ -47,15 +75,16 @@
     }
 
     .content {
+      position: relative;
+      z-index: 1; /* Posiziona il contenuto sopra il video */
       max-width: 800px;
       margin: 100px auto;
       padding: 30px;
-      background-color: #0a1128; /* Blu scuro stiloso */
+      background-color: #0a1128; /* Blu scuro */
       border-radius: 10px; /* Angoli arrotondati */
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6); /* Ombra elegante */
-      color: #fff; /* Testo bianco per il contrasto */
+      color: #fff; /* Testo bianco */
     }
-
 
     h1 {
       font-family: 'Playfair Display', serif;
@@ -105,6 +134,16 @@
   </style>
 </head>
 <body>
+  <!-- Video di sfondo -->
+  <div class="video-background">
+    <iframe src="https://player.vimeo.com/video/1034835015?badge=0&autoplay=1&loop=1&muted=1&background=1" 
+            frameborder="0" 
+            allow="autoplay; fullscreen; picture-in-picture" 
+            title="Evolutionary Thinking Background Video">
+    </iframe>
+  </div>
+  <div class="video-overlay"></div>
+
   <!-- Freccia per tornare alla Home -->
   <div class="back-to-home">
     <a href="/">
