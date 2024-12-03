@@ -245,7 +245,7 @@ p {
 /* Stile per le icone Social nella sezione Contacts */
 .social-links {
     display: flex;
-    flex-direction: column; /* Disposizione verticale */
+    flex-direction: row; /* Disposizione verticale */
     align-items: center; /* Centra orizzontalmente */
     justify-content: center; /* Centra verticalmente */
     gap: 40px; /* Spazio tra le icone */
