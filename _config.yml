@@ -4,7 +4,7 @@ description: "Exploring the intersections of mind, nature, and technology."
 baseurl: "" # Lascia vuoto per GitHub Pages
 url: "https://frescodicredito.github.io"
 
-# Navigazione aggiunta per il menu
+# Navigazione per il menu
 navigation:
   - title: Home
     url: /
