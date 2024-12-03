@@ -322,3 +322,24 @@ footer {
   margin-bottom: 10px; /* Aggiunge spazio tra gli elementi della lista */
 }
 
+.content ul li a {
+  color: white; /* Colore bianco */
+  font-size: 1.2rem; /* Dimensioni uniformi al resto del sito */
+  text-decoration: none; /* Rimuove la sottolineatura */
+}
+
+.content ul li a:hover {
+  text-decoration: underline; /* Facoltativo: sottolinea al passaggio del mouse */
+  color: #f0f0f0; /* Facoltativo: Colore leggermente più chiaro al hover */
+}
+
+.content ul {
+  list-style: none; /* Rimuove i puntini */
+  padding: 0; /* Rimuove il padding della lista */
+}
+
+.content ul li {
+  margin-bottom: 10px; /* Spazio tra gli articoli */
+}
+
+
