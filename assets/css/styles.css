@@ -323,14 +323,16 @@ footer {
 }
 
 .content ul li a {
-  color: white; /* Colore bianco */
-  font-size: 1.2rem; /* Dimensioni uniformi al resto del sito */
+  color: white; /* Mantiene il colore bianco */
+  font-size: 1.5rem; /* Ingrandisce leggermente il titolo */
+  font-weight: bold; /* Rende il titolo più evidente */
   text-decoration: none; /* Rimuove la sottolineatura */
+  line-height: 1.4; /* Migliora la spaziatura tra le righe */
 }
 
 .content ul li a:hover {
-  text-decoration: underline; /* Facoltativo: sottolinea al passaggio del mouse */
-  color: #f0f0f0; /* Facoltativo: Colore leggermente più chiaro al hover */
+  text-decoration: underline; /* Sottolinea al passaggio del mouse */
+  color: #f0a500; /* Cambia colore al hover */
 }
 
 .content ul {
