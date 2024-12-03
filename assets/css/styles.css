@@ -344,4 +344,8 @@ footer {
   margin-bottom: 10px; /* Spazio tra gli articoli */
 }
 
+nav ul li a {
+  padding: 0 15px; /* Spaziatura interna a destra e sinistra */
+}
+
 
