@@ -4,7 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ page.title }} - {{ site.title }}</title>
+  
+  <!-- Collegamento ai font -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  
+  <!-- Collegamento a Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" crossorigin="anonymous">
+  
   <style>
     body {
       font-family: 'Poppins', sans-serif;
@@ -15,63 +21,53 @@
       background-color: #000; /* Sfondo nero */
     }
 
-    nav {
-      background: rgba(0, 0, 0, 0.8);
-      position: sticky;
-      top: 0;
-      width: 100%;
-      padding: 15px 0;
-      text-align: center;
+    .back-to-home {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      z-index: 10;
     }
 
-    nav ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-    }
-
-    nav ul li a {
+    .back-to-home a {
+      color: #f0a500;
       text-decoration: none;
-      color: white;
       font-size: 1.2rem;
-      padding: 5px 10px;
       font-weight: 600;
+      display: flex;
+      align-items: center;
       transition: color 0.3s ease;
     }
 
-    nav ul li a:hover {
-      color: #f0a500;
+    .back-to-home a:hover {
+      color: #fff;
     }
 
-    footer {
-      text-align: center;
-      margin-top: 50px;
-      font-size: 0.9rem;
-      color: #ddd;
+    .back-to-home i {
+      margin-right: 10px;
     }
 
     .content {
       max-width: 800px;
-      margin: 50px auto;
+      margin: 100px auto;
       padding: 30px;
       background-color: #121212; /* Sfondo scuro per il contenuto */
       border-radius: 10px; /* Angoli arrotondati */
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Ombra elegante */
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6); /* Ombra elegante */
     }
 
     h1 {
-      font-size: 2.5rem;
+      font-family: 'Playfair Display', serif;
+      font-size: 2.8rem;
       color: #f0a500; /* Colore giallo per il titolo */
       margin-bottom: 20px;
+      text-align: center;
     }
 
     p {
       font-size: 1.3rem;
       color: #ddd;
       margin-bottom: 20px;
+      text-align: center;
     }
 
     article {
@@ -80,11 +76,13 @@
     }
 
     article blockquote {
+      font-family: 'Playfair Display', serif;
       background-color: #1a1a1a;
       padding: 20px;
       margin: 20px 0;
       border-left: 5px solid #f0a500;
       color: #ccc;
+      font-style: italic;
     }
 
     article ul, article ol {
@@ -95,9 +93,23 @@
     article li {
       margin-bottom: 10px;
     }
+
+    footer {
+      text-align: center;
+      margin-top: 50px;
+      font-size: 0.9rem;
+      color: #ddd;
+    }
   </style>
 </head>
 <body>
+  <!-- Freccia per tornare alla Home -->
+  <div class="back-to-home">
+    <a href="/home.html">
+      <i class="fas fa-arrow-left"></i> Torna alla Home
+    </a>
+  </div>
+
   <main class="content">
     <h1>{{ page.title }}</h1>
     <p><small>Published on {{ page.date | date: "%B %d, %Y" }}</small></p>
@@ -105,6 +117,7 @@
       {{ content }}
     </article>
   </main>
+  
   {% include footer.html %}
 </body>
 </html>
