@@ -227,7 +227,7 @@ article blockquote {
 .post-date {
   color: #aaa; /* Colore grigio chiaro per la data */
   font-size: 0.9rem; /* Dimensione leggermente più piccola */
-  margin-right: 15px; /* Spazio tra la data e il titolo */
+  margin-right: 30px; /* Spazio tra la data e il titolo */
   min-width: 70px; /* Fissa la larghezza per un allineamento uniforme */
   text-align: right; /* Allinea la data a destra nel suo spazio */
 }
