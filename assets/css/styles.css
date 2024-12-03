@@ -200,10 +200,10 @@ main {
     margin: 0px auto; /* Centra la colonna */
     text-align: center;
     padding: 20px;
-    background: #001f3f; /* Dark slate blue */
+    background: none; /* Dark slate blue */
     color: #fff; /* Testo bianco */
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    border-radius: none;
+    box-shadow: none;
 }
 
 .profile-picture img.rounded-photo {
