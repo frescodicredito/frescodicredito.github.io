@@ -4,7 +4,7 @@ description: "Exploring the intersections of mind, nature, and technology."
 baseurl: "" # Lascia vuoto per GitHub Pages
 url: "https://frescodicredito.github.io"
 
-# Roba aggiunta menu di navigazione ??
+# Navigazione aggiunta per il menu
 navigation:
   - title: Home
     url: /
@@ -28,7 +28,7 @@ kramdown:
   hard_wrap: false
 
 # Permalink
-permalink: /blog/:title/
+permalink: pretty
 
 # Layout predefiniti
 defaults:
@@ -37,6 +37,11 @@ defaults:
       type: "posts"
     values:
       layout: "post"
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
 
 # Paginazione (facoltativo)
 plugins:
@@ -44,3 +49,9 @@ plugins:
 
 paginate: 5
 paginate_path: "/blog/page:num/"
+
+# Esclusione file non necessari
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
