@@ -249,7 +249,7 @@ p {
     align-items: center; /* Centra orizzontalmente */
     justify-content: center; /* Centra verticalmente */
     gap: 40px; /* Spazio tra le icone */
-    margin-top: 100px; /* Spazio dall'inizio della pagina */
+    margin-top: 60px; /* Spazio dall'inizio della pagina */
     height: calc(100vh - 200px); /* Adatta l'altezza per centrare nella finestra */
 }
 
