@@ -209,7 +209,7 @@ main {
 }
 
 .about-me h1 {
-    margin-top: -20px; /* Sposta verso l'alto */
+    margin-top: -50px; /* Sposta verso l'alto */
     font-size: 2.5rem; /* Dimensione uniforme con la home */
 }
 
