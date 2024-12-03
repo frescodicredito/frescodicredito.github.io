@@ -46,7 +46,7 @@ nav {
     position: sticky;
     top: 0;
     width: 100%;
-    padding: 30px 0;
+    padding: 15px 0;
     text-align: center;
     z-index: 10;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
@@ -54,7 +54,7 @@ nav {
 
 .menu {
     list-style: none;
-    padding: 20px;
+    padding: 0;
     margin: 0;
     display: flex;
     justify-content: center;
