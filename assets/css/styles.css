@@ -313,3 +313,12 @@ footer {
   background-color: rgba(0, 0, 0, 0.9);
 }
 
+.content ul {
+  list-style: none; /* Rimuove i puntini */
+  padding: 0; /* Rimuove eventuali spazi a sinistra */
+}
+
+.content ul li {
+  margin-bottom: 10px; /* Aggiunge spazio tra gli elementi della lista */
+}
+
