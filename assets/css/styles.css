@@ -212,6 +212,11 @@ article blockquote {
   border-left: 5px solid #f0a500;
 }
 
+.post-date {
+  color: #aaa; /* Colore grigio chiaro */
+  font-size: 0.9rem; /* Leggermente più piccolo del titolo */
+  margin-left: 10px; /* Spazio tra il titolo e la data */
+}
 
 /* Stile per la sezione About Me */
 .about-me {
