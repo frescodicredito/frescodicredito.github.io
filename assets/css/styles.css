@@ -193,17 +193,19 @@ main {
 /* Stile per la sezione About Me */
 .about-me {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-direction: column; /* Disposizione verticale */
+    align-items: center; /* Centra il contenuto orizzontalmente */
     justify-content: flex-start; /* Allinea il contenuto in alto */
-    max-width: 600px; /* Larghezza massima della colonna */
-    margin: 0 auto; /* Centra la colonna orizzontalmente */
-    text-align: center;
-    padding: 20px;
-    background: none; /* Rimuove lo sfondo */
+    max-width: 800px; /* Uniforma la larghezza a quella della home */
+    margin: 0 auto; /* Centra il contenitore orizzontalmente */
+    text-align: center; /* Testo centrato */
+    padding: 20px; /* Spaziatura interna */
     color: #fff; /* Testo bianco */
-    border-radius: 0; /* Nessun angolo arrotondato */
+    font-size: 1.2rem; /* Uniforma la dimensione del testo */
+    line-height: 1.8; /* Migliora la leggibilità */
+    background: none; /* Nessuno sfondo */
     box-shadow: none; /* Nessuna ombra */
+    border-radius: 0; /* Nessun angolo arrotondato */
 }
 
 .profile-picture img.rounded-photo {
