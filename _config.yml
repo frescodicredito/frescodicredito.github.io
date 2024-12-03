@@ -4,13 +4,21 @@ description: "Exploring the intersections of mind, nature, and technology."
 baseurl: "" # Lascia vuoto per GitHub Pages
 url: "https://frescodicredito.github.io"
 
+navigation:
+  - title: Home
+    url: /
+  - title: Blog
+    url: /blog/
+  - title: About
+    url: /about.html
+
 # Informazioni autore
 author:
   name: "Your Name"
   email: "youremail@example.com"
 
 # Tema personalizzato
-theme: null
+theme: jekyll-theme-slate
 
 # Markdown e opzioni Kramdown
 markdown: kramdown
