@@ -199,7 +199,7 @@ main {
     max-width: 800px; /* Uniforma la larghezza a quella della home */
     margin: 0 auto; /* Centra il contenitore orizzontalmente */
     text-align: center; /* Testo centrato */
-    padding: 0px; /* Spaziatura interna */
+    padding: 10px; /* Spaziatura interna */
     color: #fff; /* Testo bianco */
     font-size: 1.2rem; /* Uniforma la dimensione del testo */
     line-height: 1.8; /* Migliora la leggibilità */
