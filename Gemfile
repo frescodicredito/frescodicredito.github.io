@@ -1,3 +1,4 @@
+ruby "3.2.6"
 source "https://rubygems.org"
 
 gem "jekyll", "~> 4.2.0" # Sostituisci con la versione di Jekyll che desideri usare
