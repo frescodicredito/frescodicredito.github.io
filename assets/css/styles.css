@@ -212,11 +212,36 @@ article blockquote {
   border-left: 5px solid #f0a500;
 }
 
-.post-date {
-  color: #aaa; /* Colore grigio chiaro */
-  font-size: 0.9rem; /* Leggermente più piccolo del titolo */
-  margin-left: 10px; /* Spazio tra il titolo e la data */
+.post-list {
+  list-style: none; /* Rimuove i puntini dall'elenco */
+  padding: 0;
+  margin: 0;
 }
+
+.post-item {
+  display: flex; /* Usa il layout flessibile per allineare data e titolo */
+  align-items: center; /* Allinea verticalmente */
+  margin-bottom: 15px; /* Spazio tra i post */
+}
+
+.post-date {
+  color: #aaa; /* Colore grigio chiaro per la data */
+  font-size: 0.9rem; /* Dimensione leggermente più piccola */
+  margin-right: 15px; /* Spazio tra la data e il titolo */
+  min-width: 70px; /* Fissa la larghezza per un allineamento uniforme */
+  text-align: right; /* Allinea la data a destra nel suo spazio */
+}
+
+.post-title {
+  color: #fff; /* Colore del titolo */
+  text-decoration: none; /* Rimuove la sottolineatura */
+  font-size: 1.2rem; /* Dimensione normale del titolo */
+}
+
+.post-title:hover {
+  color: #f0a500; /* Cambia colore al passaggio del mouse */
+}
+
 
 /* Stile per la sezione About Me */
 .about-me {
