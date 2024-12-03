@@ -1,3 +1,7 @@
 _site/
 
 .DS_Store
+
+# Ignora il Gemfile e Gemfile.lock durante il deploy
+Gemfile
+Gemfile.lock
