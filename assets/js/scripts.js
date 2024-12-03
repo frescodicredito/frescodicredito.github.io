@@ -24,20 +24,16 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  // Carica la Home all'avvio
-  loadContent('home.html');
-
   // Gestisce la navigazione dinamica
   links.forEach(link => {
     link.addEventListener('click', (event) => {
-      event.preventDefault();
+      event.preventDefault(); // Previene il comportamento predefinito (apertura di una nuova pagina)
       const file = link.getAttribute('data-file');
-      loadContent(file);
+      console.log(`Caricamento dinamico della sezione: ${file}`);
+      loadContent(file); // Carica la sezione selezionata
     });
   });
 
-  // Carica automaticamente il Blog se siamo su /blog/
-  if (window.location.pathname.includes("/blog")) {
-    loadContent('/blog.html');
-  }
+  // Carica automaticamente la Home all'avvio
+  loadContent('home.html');
 });
