@@ -13,7 +13,7 @@ Tutto è iniziato con una domanda semplice: cosa può fare un’intelligenza art
 Non serviva reinventare la ruota, solo sfruttare strumenti esistenti – GPT, Google Sheets, un po’ di logica – per mettere insieme una soluzione che fosse tanto semplice da usare quanto potente nei risultati.
 
 ## Come Funziona?
-Il processo è quasi magico nella sua semplicità:
+Il processo è semplice e funzionale:
 
 - **L’utente compila una tabella**: Ogni giorno, registra informazioni sulle proprie abitudini in un foglio Google (tipo di pasti, consumo di alcol o sigarette, ore di sonno, attività fisica, ecc.).
 - **Il chatbot legge i dati**: Salute & Benessere accede al foglio di calcolo, elabora le informazioni e in pochi secondi restituisce un’analisi dettagliata.
