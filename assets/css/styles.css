@@ -220,8 +220,7 @@ article blockquote {
 
 .post-item {
   display: flex; /* Usa il layout flessibile per allineare data e titolo */
-  align-items: left; /* Allinea verticalmente */
-    display: block; /* Assicura che occupi tutta la larghezza disponibile */
+  align-items: center; /* Allinea verticalmente */
   margin-bottom: 15px; /* Spazio tra i post */
 }
 
