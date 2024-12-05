@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Un esperimento con l’IA: il chatbot che analizza lo stile di vita"
+title: "Esperimenti con l’IA: il chatbot che analizza lo stile di vita"
 date: 2024-12-05
 categories: blog
 ---
